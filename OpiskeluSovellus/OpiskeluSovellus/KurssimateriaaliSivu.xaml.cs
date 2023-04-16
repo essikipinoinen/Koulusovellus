@@ -12,17 +12,17 @@ using static Xamarin.Forms.Internals.Profile;
 using System.Collections.ObjectModel;
 
 namespace OpiskeluSovellus
-{
-    public partial class KurssitSivu : ContentPage
+{	
+	public partial class KurssimateriaaliSivu : ContentPage
     {
+        ObservableCollection<Kurssimateriaali> dataa = new ObservableCollection<Kurssimateriaali>();
 
-        ObservableCollection<Kurssit> dataa = new ObservableCollection<Kurssit>();
-        public KurssitSivu()
-        {
+        public KurssimateriaaliSivu(int id)
+		{
             InitializeComponent();
 
             //Latausilmoitus
-            kurssi_lataus.Text = "Ladataan kursseja...";
+            //kurssi_lataus.Text = "Ladataan kursseja...";
 
             LoadDataFromRestAPI();
 
@@ -49,14 +49,14 @@ namespace OpiskeluSovellus
 #endif
 
                     client.BaseAddress = new Uri("https://10.0.2.2:7160/");
-                    string json = await client.GetStringAsync("api/kurssit");
+                    string json = await client.GetStringAsync("api/kurssimateriaali");
 
-                    IEnumerable<Kurssit> kurssits = JsonConvert.DeserializeObject<Kurssit[]>(json);
-                    ObservableCollection<Kurssit> dataa2 = new ObservableCollection<Kurssit>(kurssits);
+                    IEnumerable<Kurssimateriaali> kurssimateriaalis = JsonConvert.DeserializeObject<Kurssimateriaali[]>(json);
+                    ObservableCollection<Kurssimateriaali> dataa2 = new ObservableCollection<Kurssimateriaali>(kurssimateriaalis);
                     dataa = dataa2;
-                    kurssilista.ItemsSource = dataa;
+                    kurssimateriaalit.ItemsSource = dataa;
 
-                    kurssi_lataus.Text = "";
+                    //kurssi_lataus.Text = "";
 
 
                 }
@@ -66,29 +66,6 @@ namespace OpiskeluSovellus
                 }
             }
         }
-
-        private void OnSearchBarButtonPressed(object sender, EventArgs args)
-        {
-            SearchBar searchBar = (SearchBar)sender;
-            string searchText = searchBar.Text;
-            kurssilista.ItemsSource = dataa.Where(x => x.Kurssinimi.ToLower().Contains(searchText.ToLower()));
-        }
-
-        async void navibutton_Clicked(object sender, EventArgs e)
-        {
-            Kurssit kurs = (Kurssit)kurssilista.SelectedItem;
-
-            if (kurs == null)
-            {
-                await DisplayAlert("Valinta puuttuu", "Valitse kurssi.", "OK"); // (otsikko, teksti, kuittausnapin teksti)
-                return;
-            }
-            else
-            {
-                int id = kurs.KurssiId;
-                await Navigation.PushAsync(new KurssimateriaaliSivu(id)); // Navigoidaan uudelle sivulle
-            }
-        }
-    }
+	}
 }
 

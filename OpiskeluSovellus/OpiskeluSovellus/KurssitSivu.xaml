@@ -26,7 +26,10 @@
                     <TextCell Text="{Binding Kurssinimi}" Detail="{Binding Laajuus}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
-          </ListView>
+        </ListView>
+
+        
+    <Button x:Name="navibutton" Text="Kurssimateriaali" Clicked="navibutton_Clicked"></Button>
 
 
     </StackLayout>

@@ -14,3 +14,4 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/KurssitSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/KurssimateriaaliSivu.xaml.g.cs
