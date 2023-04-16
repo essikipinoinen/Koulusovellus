@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{121ED95B-2000-40DF-8159-8516E80C1948}|Default">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.OpiskeluSovellus.Android.HideInfoBar="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/OpiskelijaSivu.xaml.cs">
+    <Files>
+      <File FileName="../../.nuget/packages/xamarin.forms/2.0.1.6505/build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.targets" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/AssemblyInfo.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/OpiskelijaSivu.xaml.cs" Line="18" Column="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/OpiskelijaSivu.xaml" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Opiskelija.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OpiskeluSovellus" expanded="True">
+            <Node name="OpiskeluSovellus" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="OpiskelijaSivu.xaml" expanded="True">
+                <Node name="OpiskelijaSivu.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="OpiskeluSovellus.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
+</Properties>

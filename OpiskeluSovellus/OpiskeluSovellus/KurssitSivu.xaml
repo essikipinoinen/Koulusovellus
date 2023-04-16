@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="OpiskeluSovellus.KurssitSivu">
+<StackLayout>
+
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Kurssit" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
+        </Frame>
+        
+        <Label x:Name="kurssi_lataus" />
+
+        <Label Text="Haku"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <SearchBar Placeholder="Hae kurssin nimellä"
+                   SearchButtonPressed="OnSearchBarButtonPressed" />
+
+
+        <ListView x:Name="kurssilista" SelectionMode="Single" StyleClass="lista">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Kurssinimi}" Detail="{Binding Laajuus}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+
+
+    </StackLayout>
+        
+</ContentPage>
+
