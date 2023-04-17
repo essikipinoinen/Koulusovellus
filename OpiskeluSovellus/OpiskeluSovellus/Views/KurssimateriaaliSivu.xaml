@@ -8,6 +8,8 @@
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                 <Label Text="Kurssimateriaali" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
             </Frame>
+            <Label x:Name="kurssimateriaali_lataus" />
+
             <Label x:Name="materiaaliotsikko"></Label>
             <ListView x:Name="kurssimateriaalit" StyleClass="lista">
                 <ListView.ItemTemplate>

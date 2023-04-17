@@ -5,7 +5,6 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.csproj.AssemblyReference.cache
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.GeneratedMSBuildEditorConfig.editorconfig
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/App.xaml.g.cs
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskelijaSivu.xaml.g.cs
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfoInputs.cache
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfo.cs
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.csproj.CoreCompileInputs.cache
@@ -13,5 +12,7 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/KurssitSivu.xaml.g.cs
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/KurssimateriaaliSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/Kirjautumissivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssimateriaaliSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssitSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/OpiskelijaSivu.xaml.g.cs
