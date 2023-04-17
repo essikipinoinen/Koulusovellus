@@ -17,10 +17,11 @@ namespace OpiskeluSovellus
     {
         ObservableCollection<Kurssimateriaali> dataa = new ObservableCollection<Kurssimateriaali>();
 
-        public KurssimateriaaliSivu(int id)
+        public KurssimateriaaliSivu(int kurssiId, string Kurssinimi, string Laajuus)
 		{
             InitializeComponent();
 
+            materiaaliotsikko.Text = Kurssinimi + ": kurssimateriaalit";
             //Latausilmoitus
             //kurssi_lataus.Text = "Ladataan kursseja...";
 
@@ -54,7 +55,10 @@ namespace OpiskeluSovellus
                     IEnumerable<Kurssimateriaali> kurssimateriaalis = JsonConvert.DeserializeObject<Kurssimateriaali[]>(json);
                     ObservableCollection<Kurssimateriaali> dataa2 = new ObservableCollection<Kurssimateriaali>(kurssimateriaalis);
                     dataa = dataa2;
+                    var tietyttietot = from dataa in kurssimateriaalis where kurssiId == 1 select dataa;
                     kurssimateriaalit.ItemsSource = dataa;
+
+
 
                     //kurssi_lataus.Text = "";
 

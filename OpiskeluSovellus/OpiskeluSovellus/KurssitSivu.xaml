@@ -20,7 +20,7 @@
                    SearchButtonPressed="OnSearchBarButtonPressed" />
 
 
-        <ListView x:Name="kurssilista" SelectionMode="Single" StyleClass="lista">
+        <ListView x:Name="kurssilista" SelectionMode="Single" ItemTapped="OnItemSelected" StyleClass="lista">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Kurssinimi}" Detail="{Binding Laajuus}" />
@@ -29,7 +29,7 @@
         </ListView>
 
         
-    <Button x:Name="navibutton" Text="Kurssimateriaali" Clicked="navibutton_Clicked"></Button>
+    <!--<Button x:Name="navibutton" Text="Kurssimateriaali" Clicked="navibutton_Clicked"></Button>-->
 
 
     </StackLayout>

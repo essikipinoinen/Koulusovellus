@@ -58,7 +58,6 @@ namespace OpiskeluSovellus
 
                     kurssi_lataus.Text = "";
 
-
                 }
                 catch (Exception e)
                 {
@@ -74,21 +73,28 @@ namespace OpiskeluSovellus
             kurssilista.ItemsSource = dataa.Where(x => x.Kurssinimi.ToLower().Contains(searchText.ToLower()));
         }
 
-        async void navibutton_Clicked(object sender, EventArgs e)
+        async void OnItemSelected(object sender, ItemTappedEventArgs e)
         {
-            Kurssit kurs = (Kurssit)kurssilista.SelectedItem;
+            var kurs = e.Item as Kurssit;
+            await Navigation.PushAsync(new KurssimateriaaliSivu(kurs.KurssiId, kurs.Kurssinimi, kurs.Laajuus.ToString())); // Navigoidaan uudelle sivulle
 
-            if (kurs == null)
-            {
-                await DisplayAlert("Valinta puuttuu", "Valitse kurssi.", "OK"); // (otsikko, teksti, kuittausnapin teksti)
-                return;
-            }
-            else
-            {
-                int id = kurs.KurssiId;
-                await Navigation.PushAsync(new KurssimateriaaliSivu(id)); // Navigoidaan uudelle sivulle
-            }
         }
+
+        //async void navibutton_Clicked(object sender, EventArgs e)
+        //{
+        //    Kurssit kurs = (Kurssit)kurssilista.SelectedItem;
+
+        //    if (kurs == null)
+        //    {
+        //        await DisplayAlert("Valinta puuttuu", "Valitse kurssi.", "OK"); // (otsikko, teksti, kuittausnapin teksti)
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        int id = kurs.KurssiId;
+        //        await Navigation.PushAsync(new KurssimateriaaliSivu(id)); // Navigoidaan uudelle sivulle
+        //    }
+        //}
     }
 }
 
