@@ -17,7 +17,7 @@ namespace OpiskeluSovellus
     {
         ObservableCollection<Kurssimateriaali> dataa = new ObservableCollection<Kurssimateriaali>();
 
-        public KurssimateriaaliSivu(int kurssiId, string Kurssinimi, string Laajuus)
+        public KurssimateriaaliSivu(int KurssiId, string Kurssinimi, string Laajuus)
 		{
             InitializeComponent();
 
@@ -55,8 +55,10 @@ namespace OpiskeluSovellus
                     IEnumerable<Kurssimateriaali> kurssimateriaalis = JsonConvert.DeserializeObject<Kurssimateriaali[]>(json);
                     ObservableCollection<Kurssimateriaali> dataa2 = new ObservableCollection<Kurssimateriaali>(kurssimateriaalis);
                     dataa = dataa2;
-                    var tietyttietot = from dataa in kurssimateriaalis where kurssiId == 1 select dataa;
-                    kurssimateriaalit.ItemsSource = dataa;
+                    var tietyttietot = from Kurssimateriaali in kurssimateriaalis where Kurssimateriaali.KurssiId == 1 select dataa; //Vaan käyttäjän omat palauteet
+                    //kurssimateriaalit.ItemsSource = dataa;
+                    kurssimateriaalit.ItemsSource = dataa.Where(x => x.KurssiId == KurssiId);
+
 
 
 
