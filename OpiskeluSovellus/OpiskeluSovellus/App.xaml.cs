@@ -10,7 +10,7 @@ namespace OpiskeluSovellus
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Kirjautumissivu());
+            MainPage = new NavigationPage(new AloitusSivu());
         }
 
         protected override void OnStart ()

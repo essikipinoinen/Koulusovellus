@@ -1,18 +1,24 @@
 ﻿<Properties StartupConfiguration="{121ED95B-2000-40DF-8159-8516E80C1948}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/Kurssimateriaali.xaml">
+  <Debugger.DebugSourceFolders>
+    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" relfile="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" line="112" column="1" />
+      <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/App.xaml" relfile="OpiskeluSovellus/OpiskeluSovellus/App.xaml" line="6" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/AloitusSivu.xaml">
     <Files>
-      <File FileName="../../.nuget/packages/xamarin.forms/2.0.1.6505/build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.targets" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/AssemblyInfo.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" Line="19" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Opiskelija.cs" Line="6" Column="29" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/KurssitSivu.xaml" Line="19" Column="52" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/KurssitSivu.xaml.cs" Line="75" Column="10" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" Line="1" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/MyPage.xaml" Line="1" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/MyPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Kurssimateriaali.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/AloitusSivu.xaml.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/AloitusSivu.xaml" Line="39" Column="53" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml.cs" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus.Android/Resources/values/styles.xml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,24 +26,26 @@
           <Node name="OpiskeluSovellus" expanded="True">
             <Node name="OpiskeluSovellus" expanded="True">
               <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="OpiskelijaSivu.xaml" expanded="True" />
+              </Node>
+              <Node name="AloitusSivu.xaml" expanded="True" selected="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="Kurssimateriaali.xaml" expanded="True" selected="True" />
-              <Node name="KurssitSivu.xaml" expanded="True" />
-              <Node name="OpiskelijaSivu.xaml" expanded="True" />
             </Node>
             <Node name="OpiskeluSovellus.Android" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
+  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.OpiskeluSovellus.Android.HideInfoBar="True" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>
