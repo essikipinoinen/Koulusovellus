@@ -16,4 +16,9 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssimateriaaliSivu.xaml.g.cs
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssitSivu.xaml.g.cs
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/OpiskelijaSivu.xaml.g.cs
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/AloitusSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/AjankohtaistaSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/AloitusSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/AsetuksetSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/HenkilökuntaSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/LuokatSivu.xaml.g.cs
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/RuokaSivu.xaml.g.cs
