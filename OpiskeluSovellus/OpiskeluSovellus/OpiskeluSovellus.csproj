@@ -23,9 +23,15 @@
   <ItemGroup>
     <None Remove="Modles\" />
     <None Remove="Views\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Core\" />
+    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Core\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 </Project>
