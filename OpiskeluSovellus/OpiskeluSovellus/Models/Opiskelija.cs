@@ -18,5 +18,5 @@ namespace OpiskeluSovellus.Models
         public string Osoite { get; set; }
 
         public string Puhelinnumero { get; set; }
-	}
+    }
 }

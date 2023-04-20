@@ -19,19 +19,17 @@
     <PackageReference Include="IdentityModel" Version="6.0.0" />
     <PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.5" />
+    <PackageReference Include="Prism.NavigationEx" Version="1.2.0" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Modles\" />
     <None Remove="Views\" />
-    <None Remove="Services\" />
-    <None Remove="Services\Core\" />
-    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\Core\" />
-    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 </Project>
