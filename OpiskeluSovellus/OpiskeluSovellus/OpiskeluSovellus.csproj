@@ -15,11 +15,23 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Json.Net" Version="1.0.33" />
+    <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Modles\" />
+    <None Remove="Views\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Core\" />
+    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Core\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 </Project>
