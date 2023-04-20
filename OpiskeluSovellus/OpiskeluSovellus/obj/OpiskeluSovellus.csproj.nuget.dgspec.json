@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[1.0.33, )"
             },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -59,6 +67,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Prism.NavigationEx": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",
