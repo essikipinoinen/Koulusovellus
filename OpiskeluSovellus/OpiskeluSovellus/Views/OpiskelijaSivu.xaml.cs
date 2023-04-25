@@ -10,6 +10,7 @@ using OpiskeluSovellus.Models;
 using Newtonsoft.Json;
 using static Xamarin.Forms.Internals.Profile;
 using System.Collections.ObjectModel;
+using Xamarin.Essentials;
 
 namespace OpiskeluSovellus
 {
@@ -25,6 +26,7 @@ namespace OpiskeluSovellus
             opiskelija_lataus.Text = "Ladataan tietojasi...";
 
             LoadDataFromRestAPI();
+
 
             async void LoadDataFromRestAPI()
             {
@@ -54,33 +56,25 @@ namespace OpiskeluSovellus
                     IEnumerable<Opiskelijat> opiskelijat = JsonConvert.DeserializeObject<Opiskelijat[]>(json);
                     ObservableCollection<Opiskelijat> dataa2 = new ObservableCollection<Opiskelijat>(opiskelijat);
                     dataa = dataa2;
-                    opiskelijalista.ItemsSource = dataa;
+
+
+                    string kayttajaIdString = Preferences.Get("KayttajaId", null);
+                    int kayttajaId = 0;
+                    if (!string.IsNullOrEmpty(kayttajaIdString))
+                    {
+                        int.TryParse(kayttajaIdString, out kayttajaId);
+                    }
+
+                    var opiskelija = dataa.Where(k => k.OpiskelijaId == kayttajaId);
+                    opiskelijatiedot.ItemsSource = opiskelija;
 
                     opiskelija_lataus.Text = "";
-
-
                 }
                 catch (Exception e)
                 {
                     await DisplayAlert("Virhe", e.Message.ToString(), "Ok");
                 }
-            }
-        }
 
-        async void navibutton_Clicked(System.Object sender, System.EventArgs e)
-        {
-            Opiskelijat opis = (Opiskelijat)opiskelijalista.SelectedItem;
-
-            if (opis == null)
-            {
-                await DisplayAlert("Valinta puuttuu", "Valitse opiskelija", "OK");
-                return;
-            }
-            else
-            {
-
-                int id = opis.OpiskelijaId;
-                await Navigation.PushAsync(new KurssitSivu()); 
             }
         }
     }

@@ -8,8 +8,8 @@
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
 
            <Label Text="Kirjaudu sisään"></Label>
-            <Entry x:Name="moi1" Placeholder="Käyttäjätunnus"></Entry>
-            <Entry x:Name="moi" Placeholder="Salasana" IsPassword="True"></Entry>
+            <Entry x:Name="kayttajatunnusEntry" Placeholder="Käyttäjätunnus"></Entry>
+            <Entry x:Name="salasanaEntry" Placeholder="Salasana" IsPassword="True"></Entry>
             <Button
                 VerticalOptions="Center"
                 Text="Kirjaudu"
