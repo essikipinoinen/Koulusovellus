@@ -16,6 +16,7 @@ namespace OpiskeluSovellus.Views
     {
         ObservableCollection<Lukujärjestys> dataa = new ObservableCollection<Lukujärjestys>();
 
+        
         ObservableCollection<Kurssit> kurssidataa = new ObservableCollection<Kurssit>();
 
         ObservableCollection<Luokka> luokkadataa = new ObservableCollection<Luokka>();
@@ -77,7 +78,7 @@ namespace OpiskeluSovellus.Views
                                        orderby l.Alkamisaika ascending
                                        join k in kurssidataa on l.KurssiId equals k.KurssiId
                                        join lu in luokkadataa on k.LuokkaId equals lu.LuokkaId
-                                       select new
+                                       select new LukkariItem
                                        {
                                            Alkamisaika = l.Alkamisaika,
                                            Päättymisaika = l.Päättymisaika,
@@ -90,7 +91,7 @@ namespace OpiskeluSovellus.Views
                                        };
 
 
-                    lukujärjestyslista.ItemsSource = lukkarilista;
+                    lukujärjestyslista.ItemsSource = lukkarilista.ToList();
 
                 }
                 catch (Exception e)
@@ -102,14 +103,24 @@ namespace OpiskeluSovellus.Views
 
         async void OnItemSelected(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new AloitusSivu());
- // Muutetaan niin, että tästä siirtyy oikealle kurssimateriaalisivulle
+            if (e.Item != null)
+            {
+                LukkariItem selectedLukkariItem = (LukkariItem)e.Item;
+                int id = selectedLukkariItem.KurssiId;
+                await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedLukkariItem.Kurssinimi, selectedLukkariItem.Laajuus.ToString()));
+                if (selectedLukkariItem.Kurssinimi == "Ruoka")
+                {
+                    await Navigation.PushAsync(new RuokaSivu());
+
+                }
+            }
+            else
+            {
+                await Navigation.PushAsync(new AloitusSivu());
+            }
+            //    var kurs = e.Item as Kurssit;
+            //    await Navigation.PushAsync(new KurssimateriaaliSivu(kurs.KurssiId, kurs.Kurssinimi, kurs.Laajuus.ToString()));
         }
-
-
-
-
-
     }
 }
 
