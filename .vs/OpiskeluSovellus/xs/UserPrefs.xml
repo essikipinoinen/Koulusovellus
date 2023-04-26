@@ -4,15 +4,15 @@
   </Debugger.DebugSourceFolders>
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33_1" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/App.xaml">
     <Files>
       <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Kurssimateriaali.cs" />
       <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" Line="1" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" Line="19" Column="77" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/AloitusSivu.xaml" Line="7" Column="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" Line="27" Column="65" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/AloitusSivu.xaml" Line="19" Column="61" />
       <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Opiskelija.cs" />
       <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" Line="80" Column="17" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml" Line="36" Column="24" NotebookId="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml" Line="34" Column="43" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +23,7 @@
               <Node name="Views" expanded="True">
                 <Node name="AloitusSivu.xaml" expanded="True" />
                 <Node name="KirjautumisSivu.xaml" expanded="True" />
-                <Node name="OpiskelijaSivu.xaml" expanded="True" selected="True" />
+                <Node name="OpiskelijaSivu.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>

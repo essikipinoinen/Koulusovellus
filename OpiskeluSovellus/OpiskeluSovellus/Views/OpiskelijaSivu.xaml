@@ -25,12 +25,12 @@
                     <Label Text="{Binding Etunimi}" Style="{StaticResource opiskelijaTieto}" />
                     <Label Text="Sukunimi" Style="{StaticResource opiskelijaTietoOtsikko}" />
                     <Label Padding="0, 0, 0, 15" Text="{Binding Sukunimi}"  Style="{StaticResource opiskelijaTieto}" />
-                    <BoxView HeightRequest="0.2" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300" />
+                    <BoxView HeightRequest="0.4" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300" />
                     <Label Padding="0, 15, 0, 0" Text="Osoite" Style="{StaticResource opiskelijaTietoOtsikko}" />
                     <Label Text="{Binding Osoite}" Style="{StaticResource opiskelijaTieto}"  />
                     <Label Text="Puhelinnumero" Style="{StaticResource opiskelijaTietoOtsikko}" />
                     <Label Padding="0, 0, 0, 15"  Text="{Binding Puhelinnumero}" Style="{StaticResource opiskelijaTieto}"  />
-                    <BoxView HeightRequest="0.2" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300"/>
+                    <BoxView HeightRequest="0.4" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300"/>
                     <Label Padding="0, 15, 0, 0" Text="Käyttäjätunnus" Style="{StaticResource opiskelijaTietoOtsikko}" />
                     <Label Text="{Binding Käyttäjätunnus}" Style="{StaticResource opiskelijaTieto}" />
                     <Label Text="Salasana" Style="{StaticResource opiskelijaTietoOtsikko}" />

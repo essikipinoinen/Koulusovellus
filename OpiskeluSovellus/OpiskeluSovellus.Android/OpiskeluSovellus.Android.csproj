@@ -84,6 +84,9 @@
     <PackageReference Include="Prism.Core">
       <Version>8.1.97</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfSchedule">
+      <Version>21.1.41</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

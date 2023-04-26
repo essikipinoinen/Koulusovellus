@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    x:Class="OpiskeluSovellus.Views.LukujärjestysSivu">
+
+    <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 100" Margin="0, 0, 0, -80" CornerRadius="0" HeightRequest="150">
+                <StackLayout>
+                    <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                    <Label Padding="0, 20, 0, 0" Text="Lukujärjestys" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+                    <Label FontSize="Body" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele kurssin tietoja valitsemalla haluttu kurssi.</Label>
+                </StackLayout>
+            </Frame>        
+        <Label x:Name="opiskelija_lataus" />
+        <ScrollView>
+
+            <ListView x:Name="lukujärjestyslista" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10"
+                                   BackgroundColor="White"
+                                   HasShadow="True"
+                                   Padding="10, 20, 20, 20"
+                                   Margin="5, 0, 5, 10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50" />
+                                            <ColumnDefinition Width="200" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
+                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+
+                                    </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </ScrollView>
+     </StackLayout>
+</ContentPage>
+

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b7fllX5FdNNlRhnVUgpGcRtrvOdBLzRcV0txAY6+rt0N+FFuHoWZjiJMF4ajSlNPLqhNQd6Fz5J/3mZLCU21fA==",
+  "dgSpecHash": "qpWVLb9HOYi1HxJWCzB++mvxJDY/SASvCJLQQlN+jek+Nq4A2HZgm5tJ8rTRi1UOth9gAv9RpIW3NvJ6FVxifA==",
   "success": true,
   "projectFilePath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,9 @@
     "/Users/essikipinoinen/.nuget/packages/prism.core/8.1.97/prism.core.8.1.97.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/prism.forms/7.1.0.431/prism.forms.7.1.0.431.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/prism.navigationex/1.2.0/prism.navigationex.1.2.0.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/syncfusion.licensing/21.1.41/syncfusion.licensing.21.1.41.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.core/21.1.41/syncfusion.xamarin.core.21.1.41.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.sfschedule/21.1.41/syncfusion.xamarin.sfschedule.21.1.41.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.diagnostics.diagnosticsource/7.0.0/system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",

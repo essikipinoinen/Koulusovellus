@@ -23,6 +23,7 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.5" />
     <PackageReference Include="Prism.NavigationEx" Version="1.2.0" />
     <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="21.1.41" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Modles\" />

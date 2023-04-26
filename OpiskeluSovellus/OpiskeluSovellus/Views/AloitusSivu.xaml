@@ -37,8 +37,8 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <!--Muista lisätä clickedit lukujärjestys ja keskustelut & poistetaan koti-->
-                <Button ImageSource="lukujarjestys.png"  Style="{StaticResource buttonStyle}" Text="Lukujärjestys" Grid.Row="0" Grid.Column="0"></Button>
+                <!--Muista lisätä clickedit keskustelut & poistetaan-->
+                <Button ImageSource="lukujarjestys.png"  Style="{StaticResource buttonStyle}" Text="Lukujärjestys" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked_Lukujärjestys"></Button>
                 <Button ImageSource="kurssit.png" Style="{StaticResource buttonStyle}" Text="Kurssit" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked_Kurssit"></Button>
                 <Button ImageSource="ajankohtaista.png" Style="{StaticResource buttonStyle}" Text="Ajankohtaista" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked_Ajankohtaista"></Button>
                 <Button ImageSource="luokat.png" Style="{StaticResource buttonStyle}" Text="Luokat" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked_Luokat"></Button>

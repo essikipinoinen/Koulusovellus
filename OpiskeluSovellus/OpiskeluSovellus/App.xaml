@@ -21,6 +21,19 @@
                 <Setter Property="xct:ShadowEffect.OffsetY" Value="20" />
                 <Setter Property="xct:ShadowEffect.Opacity" Value="0.6" />
             </Style>
+            <Style x:Key="lukkariKorttiStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="3" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="xct:ShadowEffect.Color" Value="#06253A" />
+                <Setter Property="WidthRequest" Value="300" />
+                <Setter Property="HeightRequest" Value="80" />
+               
+                <Setter Property="xct:ShadowEffect.Radius" Value="3" />
+                <Setter Property="xct:ShadowEffect.Color" Value="#06253A" />
+                <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+                <Setter Property="xct:ShadowEffect.OffsetY" Value="5" />
+                <Setter Property="xct:ShadowEffect.Opacity" Value="0.6" />
+            </Style>
             <Style x:Key="opiskelijaTietoOtsikko" TargetType="Label">
                 <Setter Property="FontSize" Value="14" />
                 <Setter Property="FontAttributes" Value="Bold" />

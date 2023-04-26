@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using OpiskeluSovellus.Views;
 using Xamarin.Forms;
 
 namespace OpiskeluSovellus
@@ -52,6 +52,12 @@ namespace OpiskeluSovellus
         void Button_Clicked_Asetukset(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new AsetuksetSivu());
+        }
+
+        void Button_Clicked_Lukujärjestys(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new LukujärjestysSivu());
+
         }
     }
 }

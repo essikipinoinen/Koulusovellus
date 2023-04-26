@@ -18,6 +18,7 @@
           "Newtonsoft.Json": "13.0.3",
           "Prism.Core": "8.1.97",
           "Prism.NavigationEx": "1.2.0",
+          "Syncfusion.Xamarin.SfSchedule": "21.1.41",
           "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2578"
@@ -555,6 +556,38 @@
           "lib/netstandard2.0/Prism.NavigationEx.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/21.1.41": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "21.1.41.0",
+            "fileVersion": "21.1.41.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/21.1.41": {
+        "dependencies": {
+          "Syncfusion.Licensing": "21.1.41",
+          "Xamarin.Forms": "5.0.0.2578"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "21.1.41.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule/21.1.41": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "21.1.41",
+          "Xamarin.Forms": "5.0.0.2578"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfSchedule.XForms.dll": {
+            "assemblyVersion": "21.1.41.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1151,6 +1184,27 @@
       "sha512": "sha512-aqaqgANd/+rCBTbUGlhgwd+F1+PaJ/+7Cr7g/4qwBL7n5NSMLv700fpa6440y4hZknjJ6nEOK23PYjECcDuw7A==",
       "path": "prism.navigationex/1.2.0",
       "hashPath": "prism.navigationex.1.2.0.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/21.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-biZ5e9sMtHUhb6wKozaZEa5X7yB0J46LjqMp6YVKYKaUWcVe0606xriIbT3GcAtyBIC6CqLywONXhy2IYAbgYA==",
+      "path": "syncfusion.licensing/21.1.41",
+      "hashPath": "syncfusion.licensing.21.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/21.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pv4rOFBgDlyjD6BNy6WmzH0CJLhZJpTJPV/vi/Wzh5nMUAn2sXRMGrz+cXqNynk85O19Yvjer7xNqW5M1DwCdw==",
+      "path": "syncfusion.xamarin.core/21.1.41",
+      "hashPath": "syncfusion.xamarin.core.21.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfSchedule/21.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U53re7BlYvtmT5i5obexjWszzl9A0Q/1CtMtvqaBOQsEG1YQeGvX7urKbmcdPLvQWP0uSC9o0XwcbTlw9keD3A==",
+      "path": "syncfusion.xamarin.sfschedule/21.1.41",
+      "hashPath": "syncfusion.xamarin.sfschedule.21.1.41.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
