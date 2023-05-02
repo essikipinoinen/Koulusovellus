@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ITy4x+UAE3DSb8g1Kk1qhHurj7fv7DJ6fqFoWbYeB2luy3emZ0YUWUKr1XxHrjVCEzuatn+b+9qEdNuIdBRYCA==",
+  "dgSpecHash": "TTvI2L4ADQavqlv2n8+rfNlw6YRkXYhn9Jh9NhrVFoFf/BXVShsTkiqLSIRxc6vNE9bLXC1JJO7vauF/2uGTRw==",
   "success": true,
   "projectFilePath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.core/21.1.41/syncfusion.xamarin.core.21.1.41.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.sfschedule/21.1.41/syncfusion.xamarin.sfschedule.21.1.41.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.diagnostics.diagnosticsource/7.0.0/system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
@@ -77,7 +78,8 @@
     "/Users/essikipinoinen/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
-    "/Users/essikipinoinen/.nuget/packages/xamarin.forms/5.0.0.2578/xamarin.forms.5.0.0.2578.nupkg.sha512"
+    "/Users/essikipinoinen/.nuget/packages/xamarin.forms/5.0.0.2578/xamarin.forms.5.0.0.2578.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/xamarin.forms.pancakeview/2.3.0.759/xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
   ],
   "logs": []
 }

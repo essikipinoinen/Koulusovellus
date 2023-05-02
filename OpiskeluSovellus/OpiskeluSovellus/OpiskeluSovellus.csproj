@@ -24,6 +24,7 @@
     <PackageReference Include="Prism.NavigationEx" Version="1.2.0" />
     <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="21.1.41" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Modles\" />

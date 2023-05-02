@@ -17,6 +17,8 @@ namespace OpiskeluSovellus
     {
 
         ObservableCollection<Kurssit> dataa = new ObservableCollection<Kurssit>();
+        ObservableCollection<Luokka> luokkadataa = new ObservableCollection<Luokka>();
+        ObservableCollection<Henkilökunta> henkilökuntadataa = new ObservableCollection<Henkilökunta>();
         public KurssitSivu()
         {
             InitializeComponent();
@@ -50,11 +52,43 @@ namespace OpiskeluSovellus
 
                     client.BaseAddress = new Uri("https://10.0.2.2:7160/");
                     string json = await client.GetStringAsync("api/kurssit");
+                    string json2 = await client.GetStringAsync("api/luokat");
+                    string json3 = await client.GetStringAsync("api/henkilökunta");
 
                     IEnumerable<Kurssit> kurssits = JsonConvert.DeserializeObject<Kurssit[]>(json);
                     ObservableCollection<Kurssit> dataa2 = new ObservableCollection<Kurssit>(kurssits);
                     dataa = dataa2;
-                    kurssilista.ItemsSource = dataa;
+
+                    IEnumerable<Luokka> luokkas = JsonConvert.DeserializeObject<Luokka[]>(json2);
+                    ObservableCollection<Luokka> luokkadataa2 = new ObservableCollection<Luokka>(luokkas);
+                    luokkadataa = luokkadataa2;
+
+                    IEnumerable<Henkilökunta> henkilökuntas = JsonConvert.DeserializeObject<Henkilökunta[]>(json3);
+                    ObservableCollection<Henkilökunta> henkilökuntadataa2 = new ObservableCollection<Henkilökunta>(henkilökuntas);
+                    henkilökuntadataa = henkilökuntadataa2;
+
+
+
+                    var kurssilistaus = from kl in dataa
+                                        where kl.Kurssinimi != "Ruoka"
+                                        join hk in henkilökuntadataa on kl.HenkilökuntaId equals hk.HenkilökuntaId
+                                        join lu in luokkadataa on kl.LuokkaId equals lu.LuokkaId
+                                        select new KurssilistaItem
+                                        {
+                                            KurssiId = kl.KurssiId,
+                                            Kurssinimi = kl.Kurssinimi,
+                                            Laajuus = kl.Laajuus,
+                                            Suoritettu = kl.Suoritettu,
+                                            Etunimi = hk.Etunimi,
+                                            Sukunimi = hk.Sukunimi,
+                                            Luokkanimi = lu.Luokkanimi,
+                                            Luokkatyyppi = lu.Luokkatyyppi
+                                        };
+
+                 
+
+                    kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == true).ToList();
+                    kurssilista.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == false).ToList();
 
                     kurssi_lataus.Text = "";
 
@@ -75,9 +109,9 @@ namespace OpiskeluSovellus
 
         async void OnItemSelected(object sender, ItemTappedEventArgs e)
         {
-            var kurs = e.Item as Kurssit;
-            await Navigation.PushAsync(new KurssimateriaaliSivu(kurs.KurssiId, kurs.Kurssinimi, kurs.Laajuus.ToString())); // Navigoidaan uudelle sivulle
-
+            KurssilistaItem selectedKurssilistaItem = (KurssilistaItem)e.Item;
+            int id = selectedKurssilistaItem.KurssiId;
+            await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedKurssilistaItem.Kurssinimi, selectedKurssilistaItem.Laajuus.ToString()));
         }
 
         //async void navibutton_Clicked(object sender, EventArgs e)

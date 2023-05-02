@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qpWVLb9HOYi1HxJWCzB++mvxJDY/SASvCJLQQlN+jek+Nq4A2HZgm5tJ8rTRi1UOth9gAv9RpIW3NvJ6FVxifA==",
+  "dgSpecHash": "xn9TjOCLj5d3wdTDd0yDZHvl5lquagtI7inFKHbawOqSkjLdyGanYU8hAt6nCi1cJk2TrnTU/GqnwfCGWfDusw==",
   "success": true,
   "projectFilePath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.core/21.1.41/syncfusion.xamarin.core.21.1.41.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/syncfusion.xamarin.sfschedule/21.1.41/syncfusion.xamarin.sfschedule.21.1.41.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.diagnostics.diagnosticsource/7.0.0/system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
@@ -119,6 +120,7 @@
     "/Users/essikipinoinen/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.forms/5.0.0.2578/xamarin.forms.5.0.0.2578.nupkg.sha512",
+    "/Users/essikipinoinen/.nuget/packages/xamarin.forms.pancakeview/2.3.0.759/xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.google.android.material/1.4.0.2/xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

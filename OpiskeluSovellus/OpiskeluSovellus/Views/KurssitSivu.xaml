@@ -3,12 +3,21 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="OpiskeluSovellus.KurssitSivu">
-<StackLayout>
 
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Kurssit" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
-        </Frame>
-        
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 100" Margin="0, 0, 0, -80" CornerRadius="0" HeightRequest="150">
+                <StackLayout>
+                    <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                    <Label Padding="0, 20, 0, 0" Text="Kurssit" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+                    <Label FontSize="Body" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele suoritettuja ja suorittamattomia kursseja.</Label>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10"
+                    BackgroundColor="White"
+                    HasShadow="True"
+                    Padding="10, 20, 20, 20"
+                    Margin="5, 0, 5, 10">
+        <StackLayout>
         <Label x:Name="kurssi_lataus" />
 
         <Label Text="Haku"
@@ -19,20 +28,84 @@
         <SearchBar Placeholder="Hae kurssin nimellä"
                    SearchButtonPressed="OnSearchBarButtonPressed" />
 
+        <ScrollView>
+            <StackLayout BackgroundColor="#f4f4f4">
+            <Frame CornerRadius="10"
+                    BackgroundColor="White"
+                    HasShadow="True"
+                    Padding="20, 20, 20, 20"
+                    Margin="5, 5, 5, 5">
+                        <Label Text="Suorittamattomat"></Label>
+            </Frame>
+                <ListView Margin="0, 0, 0, -450" x:Name="kurssilista" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <Frame CornerRadius="10"
+                                   BackgroundColor="White"
+                                   HasShadow="True"
+                                   Padding="10, 20, 20, 20"
+                                   Margin="5, 0, 5, 10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                            <Label FontSize="12" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
+                                            <Label FontSize="12"  Text="{Binding Laajuus}"  Grid.Row="0"  Grid.Column="1" />
+                                            <Label FontAttributes="Bold" Text="{Binding Etunimi}" Grid.Row="1" Grid.Column="0"/>
+                                            <Label FontAttributes="Bold" Text="{Binding Sukunimi}" Grid.Row="1" Grid.Column="1"/>
+                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="2" Grid.Column="0"/>
+                                            <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="2" Grid.Column="1"/>
 
-        <ListView x:Name="kurssilista" SelectionMode="Single" ItemTapped="OnItemSelected" StyleClass="lista">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Kurssinimi}" Detail="{Binding Laajuus}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                    </Grid>
 
-        
-    <!--<Button x:Name="navibutton" Text="Kurssimateriaali" Clicked="navibutton_Clicked"></Button>-->
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            <Frame CornerRadius="10"
+                    BackgroundColor="White"
+                    HasShadow="True"
+                    Padding="10, 20, 20, 20"
+                    Margin="5, 5, 5, 10">
+                        <Label Text="Suoritetut"></Label>
+            </Frame>
+                <ListView VerticalOptions="FillAndExpand" x:Name="kurssilista2" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                          <Frame CornerRadius="10"
+                                   BackgroundColor="White"
+                                   HasShadow="True"
+                                   Padding="10, 20, 20, 20"
+                                   Margin="5, 0, 5, 10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                            <Label FontSize="12" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
+                                            <Label FontSize="12"  Text="{Binding Laajuus}"  Grid.Row="0"  Grid.Column="1" />
+                                            <Label FontAttributes="Bold" Text="{Binding Etunimi}" Grid.Row="1" Grid.Column="0"/>
+                                            <Label FontAttributes="Bold" Text="{Binding Sukunimi}" Grid.Row="1" Grid.Column="1"/>
+                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="2" Grid.Column="0"/>
+                                            <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="2" Grid.Column="1"/>
 
+                                    </Grid>
+                            </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-    </StackLayout>
+            </StackLayout>
+    </ScrollView>
+            </StackLayout>
+        </Frame>
+</StackLayout>
+
         
 </ContentPage>
 
