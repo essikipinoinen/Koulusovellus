@@ -10,6 +10,7 @@ using OpiskeluSovellus.Models;
 using Newtonsoft.Json;
 using static Xamarin.Forms.Internals.Profile;
 using System.Collections.ObjectModel;
+using Xamarin.CommunityToolkit.UI.Views;
 
 namespace OpiskeluSovellus
 {
@@ -22,6 +23,7 @@ namespace OpiskeluSovellus
         ObservableCollection<Henkilökunta> henkilökuntadataa = new ObservableCollection<Henkilökunta>();
         public KurssitSivu()
         {
+
 
             InitializeComponent();
 
@@ -98,7 +100,6 @@ namespace OpiskeluSovellus
                 }
             }
         }
-
         private void OnSearchBarButtonPressed(object sender, EventArgs args)
         {
             SearchBar searchBar = (SearchBar)sender;
@@ -113,21 +114,7 @@ namespace OpiskeluSovellus
             await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedKurssilistaItem.Kurssinimi, selectedKurssilistaItem.Laajuus.ToString()));
         }
 
-        //async void navibutton_Clicked(object sender, EventArgs e)
-        //{
-        //    Kurssit kurs = (Kurssit)kurssilista.SelectedItem;
 
-        //    if (kurs == null)
-        //    {
-        //        await DisplayAlert("Valinta puuttuu", "Valitse kurssi.", "OK"); // (otsikko, teksti, kuittausnapin teksti)
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        int id = kurs.KurssiId;
-        //        await Navigation.PushAsync(new KurssimateriaaliSivu(id)); // Navigoidaan uudelle sivulle
-        //    }
-        //}
     }
 }
 

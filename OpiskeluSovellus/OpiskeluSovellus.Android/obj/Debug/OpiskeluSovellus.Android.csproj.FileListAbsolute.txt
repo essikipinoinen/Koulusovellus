@@ -833,3 +833,4 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeDrawable.java
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeViewRenderer.java
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/android/src/crc64f8908e42fa42e603/RoundedCornerOutlineProvider.java
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/nuoli.png
