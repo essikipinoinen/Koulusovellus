@@ -16,11 +16,13 @@ namespace OpiskeluSovellus
     public partial class KurssitSivu : ContentPage
     {
 
+
         ObservableCollection<Kurssit> dataa = new ObservableCollection<Kurssit>();
         ObservableCollection<Luokka> luokkadataa = new ObservableCollection<Luokka>();
         ObservableCollection<Henkilökunta> henkilökuntadataa = new ObservableCollection<Henkilökunta>();
         public KurssitSivu()
         {
+
             InitializeComponent();
 
             //Latausilmoitus
@@ -79,13 +81,10 @@ namespace OpiskeluSovellus
                                             Kurssinimi = kl.Kurssinimi,
                                             Laajuus = kl.Laajuus,
                                             Suoritettu = kl.Suoritettu,
-                                            Etunimi = hk.Etunimi,
-                                            Sukunimi = hk.Sukunimi,
+                                            KokoNimi = hk.Etunimi + " " + hk.Sukunimi,
                                             Luokkanimi = lu.Luokkanimi,
                                             Luokkatyyppi = lu.Luokkatyyppi
                                         };
-
-                 
 
                     kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == true).ToList();
                     kurssilista.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == false).ToList();

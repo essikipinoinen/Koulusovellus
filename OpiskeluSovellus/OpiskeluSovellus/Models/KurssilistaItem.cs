@@ -11,6 +11,7 @@ namespace OpiskeluSovellus.Models
         public string Sukunimi { get; set; }
         public string Luokkanimi { get; set; }
         public string Luokkatyyppi { get; set; }
+        public string KokoNimi { get; internal set; }
     }
 }
 

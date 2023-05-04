@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="OpiskeluSovellus.KurssitSivu">
 
         <StackLayout>
@@ -17,95 +18,111 @@
                     HasShadow="True"
                     Padding="10, 20, 20, 20"
                     Margin="5, 0, 5, 10">
-        <StackLayout>
-        <Label x:Name="kurssi_lataus" />
+                <StackLayout>
+                <Label x:Name="kurssi_lataus" />
 
-        <Label Text="Haku"
-               FontSize="20"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+                <Label Text="Haku"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
 
-        <SearchBar Placeholder="Hae kurssin nimellä"
-                   SearchButtonPressed="OnSearchBarButtonPressed" />
+                <SearchBar Placeholder="Hae kurssin nimellä"
+                           SearchButtonPressed="OnSearchBarButtonPressed" />
 
-        <ScrollView>
-            <StackLayout BackgroundColor="#f4f4f4">
-            <Frame CornerRadius="10"
-                    BackgroundColor="White"
-                    HasShadow="True"
-                    Padding="20, 20, 20, 20"
-                    Margin="5, 5, 5, 5">
-                        <Label Text="Suorittamattomat"></Label>
-            </Frame>
-                <ListView Margin="0, 0, 0, -450" x:Name="kurssilista" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                            <Label FontSize="12" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Laajuus}"  Grid.Row="0"  Grid.Column="1" />
-                                            <Label FontAttributes="Bold" Text="{Binding Etunimi}" Grid.Row="1" Grid.Column="0"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Sukunimi}" Grid.Row="1" Grid.Column="1"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="2" Grid.Column="0"/>
-                                            <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="2" Grid.Column="1"/>
 
-                                    </Grid>
 
-                                </Frame>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            <Frame CornerRadius="10"
-                    BackgroundColor="White"
-                    HasShadow="True"
-                    Padding="10, 20, 20, 20"
-                    Margin="5, 5, 5, 10">
-                        <Label Text="Suoritetut"></Label>
-            </Frame>
-                <ListView VerticalOptions="FillAndExpand" x:Name="kurssilista2" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                          <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                            <Label FontSize="12" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Laajuus}"  Grid.Row="0"  Grid.Column="1" />
-                                            <Label FontAttributes="Bold" Text="{Binding Etunimi}" Grid.Row="1" Grid.Column="0"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Sukunimi}" Grid.Row="1" Grid.Column="1"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="2" Grid.Column="0"/>
-                                            <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="2" Grid.Column="1"/>
-
-                                    </Grid>
+                    <ScrollView>
+                      <StackLayout>
+                        <xct:Expander BackgroundColor="#f4f4f4">
+                            <xct:Expander.Header>
+                                <Frame CornerRadius="10"
+                                    BackgroundColor="White"
+                                    HasShadow="True"
+                                    Padding="20, 20, 20, 20"
+                                    Margin="5, 5, 5, 5">
+                                        <Label Text="Suorittamattomat"></Label>
                             </Frame>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                            </xct:Expander.Header>
+                            <ListView Margin="20, 0, 0, -450" x:Name="kurssilista" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                        <Frame CornerRadius="5"
+                                                BackgroundColor="White"
+                                                HasShadow="True"
+                                                Padding="15"
+                                                Margin="5, 0, 5, 3">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="100" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="20" />
+                                                        <RowDefinition Height="0.4" />
+                                                        <RowDefinition Height="15" />
+                                                        <RowDefinition Height="15" />
+                                                        <RowDefinition Height="15" />
+                                                    </Grid.RowDefinitions>
+                                                        <Label FontSize="14" FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
+                                                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300" Grid.Row="1"  Grid.ColumnSpan="3" />
+                                                        <Label FontSize="12" FontAttributes="Bold" Text="Opettaja"  Grid.Row="2"  Grid.Column="0" />
+                                                        <Label FontSize="12" Text="{Binding KokoNimi}" Grid.Row="2" Grid.Column="1"/>
+                                                        <Label FontSize="12" FontAttributes="Bold" Text="{Binding Luokkatyyppi}" Grid.Row="3" Grid.Column="0"/>
+                                                        <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="3" Grid.Column="1"/>
+                                                        <Label FontSize="12" FontAttributes="Bold" Text="Laajuus" Grid.Row="4" Grid.Column="0"/>
+                                                        <Label FontSize="12" Text="{Binding Laajuus}" Grid.Row="4" Grid.Column="1"/>
+                                                </Grid>
 
-            </StackLayout>
-    </ScrollView>
-            </StackLayout>
+                                            </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                         </xct:Expander>
+                        <xct:Expander BackgroundColor="#f4f4f4">
+                            <xct:Expander.Header>
+                        <Frame CornerRadius="10"
+                                BackgroundColor="White"
+                                HasShadow="True"
+                                Padding="10, 20, 20, 20"
+                                Margin="5, 5, 5, 10">
+                                    <Label Text="Suoritetut"></Label>
+                        </Frame>
+                                                            </xct:Expander.Header>
+                            <ListView VerticalOptions="FillAndExpand" x:Name="kurssilista2" SelectionMode="Single" ItemTapped="OnItemSelected" HasUnevenRows="True">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                      <Frame CornerRadius="10"
+                                               BackgroundColor="White"
+                                               HasShadow="True"
+                                               Padding="10, 20, 20, 20"
+                                               Margin="5, 0, 5, 10">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                        <Label FontSize="12" Text="{Binding Kurssinimi}" Grid.Row="0"  Grid.Column="0"/>
+                                                        <Label FontSize="12"  Text="{Binding Laajuus}"  Grid.Row="0"  Grid.Column="1" />
+                                                        <Label FontAttributes="Bold" Text="{Binding Etunimi}" Grid.Row="1" Grid.Column="0"/>
+                                                        <Label FontAttributes="Bold" Text="{Binding Sukunimi}" Grid.Row="1" Grid.Column="1"/>
+                                                        <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="2" Grid.Column="0"/>
+                                                        <Label FontSize="12" Text="{Binding Luokkanimi}" Grid.Row="2" Grid.Column="1"/>
+
+                                                </Grid>
+                                        </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            
+                         </xct:Expander>
+                    </StackLayout>
+                </ScrollView>
+             </StackLayout>
         </Frame>
-</StackLayout>
-
-        
+    </StackLayout>      
 </ContentPage>
 
