@@ -1,33 +1,26 @@
 ﻿<Properties StartupConfiguration="{121ED95B-2000-40DF-8159-8516E80C1948}|Default">
-  <MultiItemStartupConfigurations />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33_1" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
-  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33_1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" relfile="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" line="112" column="1" />
       <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/App.xaml" relfile="OpiskeluSovellus/OpiskeluSovellus/App.xaml" line="6" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml.cs">
+  <Debugger.DebugSourceFolders>
+    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
+  </Debugger.DebugSourceFolders>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml">
     <Files>
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml.cs" Line="126" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/AloitusSivu.xaml.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KurssitSivu.xaml.cs" />
-      <File FileName="../../Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KurssitSivu.xaml" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/LukkariItem.cs" Line="17" Column="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml.cs" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/AloitusSivu.xaml" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Lukujärjestys.cs" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Luokka.cs" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Kurssi.cs" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml" NotebookId="1" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KurssimateriaaliSivu.xaml.cs" Line="29" Column="45" NotebookId="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml.cs" Line="131" Column="3" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/LukujärjestysSivu.xaml" Line="24" Column="23" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Lukujärjestys.cs" Line="13" Column="1" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/LukkariItem.cs" Line="8" Column="48" />
+      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/KurssilistaItem.cs" Line="1" Column="1" />
+      <File FileName="../../Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs" Line="157" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,21 +29,17 @@
             <Node name="OpiskeluSovellus" expanded="True">
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="AjankohtaistaSivu.xaml" expanded="True" />
-                <Node name="AloitusSivu.xaml" expanded="True" />
-                <Node name="KirjautumisSivu.xaml" expanded="True" />
-                <Node name="KurssimateriaaliSivu.xaml" expanded="True" />
                 <Node name="KurssitSivu.xaml" expanded="True" />
-                <Node name="LukujärjestysSivu.xaml" expanded="True">
-                  <Node name="LukujärjestysSivu.xaml.cs" selected="True" />
-                </Node>
+                <Node name="LukujärjestysSivu.xaml" expanded="True" selected="True" />
                 <Node name="OpiskelijaSivu.xaml" expanded="True" />
+                <Node name="RuokaSivu.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
             <Node name="OpiskeluSovellus.Android" expanded="True">
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
             </Node>
@@ -59,9 +48,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Debugger.DebugSourceFolders>
-    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
-  </Debugger.DebugSourceFolders>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
 </Properties>

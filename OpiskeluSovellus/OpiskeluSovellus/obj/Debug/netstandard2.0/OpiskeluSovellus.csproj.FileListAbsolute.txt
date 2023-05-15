@@ -15,11 +15,11 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfoInputs.cache
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfo.cs
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.csproj.CoreCompileInputs.cache
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.dll
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.deps.json
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/ref/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.pdb
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.dll
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb

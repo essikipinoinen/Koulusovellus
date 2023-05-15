@@ -82,6 +82,7 @@ namespace OpiskeluSovellus.Views
                                        {
                                            Alkamisaika = l.Alkamisaika,
                                            Päättymisaika = l.Päättymisaika,
+                                           Viikonpäivä = l.Viikonpäivä,
                                            KurssiId = l.KurssiId,
                                            Kurssinimi = k.Kurssinimi,
                                            Laajuus = k.Laajuus,
@@ -90,8 +91,15 @@ namespace OpiskeluSovellus.Views
                                            Luokkatyyppi = lu.Luokkatyyppi
                                        };
 
+                    lukkarimaanantai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Maanantai");
+                    lukkaritiistai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Tiistai");
+                    lukkarikeskiviikko.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Keskiviikko");
+                    lukkaritorstai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Torstai");
+                    lukkariperjantai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Perjantai");
 
-                    lukujärjestyslista.ItemsSource = lukkarilista.ToList();
+                    viikonpäiväteksti.Text = "Maanantai"; //TÄHÄN SE PÄIVÄ MIKÄ NYT ON
+                    vasemmallenappi.BackgroundColor = Color.LightGray;
+
 
                 }
                 catch (Exception e)
@@ -120,6 +128,95 @@ namespace OpiskeluSovellus.Views
             }
             //    var kurs = e.Item as Kurssit;
             //    await Navigation.PushAsync(new KurssimateriaaliSivu(kurs.KurssiId, kurs.Kurssinimi, kurs.Laajuus.ToString()));
+        }
+
+  
+
+        void Oikealle_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (viikonpäiväteksti.Text == "Maanantai")
+            {
+                lukkarimaanantai.IsVisible = false;
+                lukkaritiistai.IsVisible = true;
+                viikonpäiväteksti.Text = "Tiistai";
+                oikeallenappi.BackgroundColor = Color.White;
+                vasemmallenappi.BackgroundColor = Color.White;
+            }
+
+            else if (viikonpäiväteksti.Text == "Tiistai")
+            {
+                lukkaritiistai.IsVisible = false;
+                lukkarikeskiviikko.IsVisible = true;
+                viikonpäiväteksti.Text = "Keskiviikko";
+                oikeallenappi.BackgroundColor = Color.White;
+                vasemmallenappi.BackgroundColor = Color.White;
+            }
+
+            else if (viikonpäiväteksti.Text == "Keskiviikko")
+            {
+                lukkarikeskiviikko.IsVisible = false;
+                lukkaritorstai.IsVisible = true;
+                viikonpäiväteksti.Text = "Torstai";
+                oikeallenappi.BackgroundColor = Color.White;
+                vasemmallenappi.BackgroundColor = Color.White;
+            }
+
+            else if (viikonpäiväteksti.Text == "Torstai")
+            {
+                lukkaritorstai.IsVisible = false;
+                lukkariperjantai.IsVisible = true;
+                viikonpäiväteksti.Text = "Perjantai";
+                oikeallenappi.BackgroundColor = Color.LightGray;
+                vasemmallenappi.BackgroundColor = Color.White;
+            }
+
+            else if (viikonpäiväteksti.Text == "Perjantai")
+            {
+
+            }
+        }
+
+        void Vasemmalle_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (viikonpäiväteksti.Text == "Maanantai")
+            {
+            }
+
+            else if (viikonpäiväteksti.Text == "Tiistai")
+            {
+                vasemmallenappi.BackgroundColor = Color.LightGray;
+                oikeallenappi.BackgroundColor = Color.White;
+                lukkarimaanantai.IsVisible = true;
+                lukkaritiistai.IsVisible = false;
+                viikonpäiväteksti.Text = "Maanantai";
+            }
+
+            else if (viikonpäiväteksti.Text == "Keskiviikko")
+            {
+                vasemmallenappi.BackgroundColor = Color.White;
+                oikeallenappi.BackgroundColor = Color.White;
+                lukkaritiistai.IsVisible = true;
+                lukkarikeskiviikko.IsVisible = false;
+                viikonpäiväteksti.Text = "Tiistai";
+            }
+
+            else if (viikonpäiväteksti.Text == "Torstai")
+            {
+                vasemmallenappi.BackgroundColor = Color.White;
+                oikeallenappi.BackgroundColor = Color.White;
+                lukkarikeskiviikko.IsVisible = true;
+                lukkaritorstai.IsVisible = false;
+                viikonpäiväteksti.Text = "Keskiviikko";
+            }
+
+            else if (viikonpäiväteksti.Text == "Perjantai")
+            {
+                vasemmallenappi.BackgroundColor = Color.White;
+                oikeallenappi.BackgroundColor = Color.White;
+                lukkaritorstai.IsVisible = true;
+                lukkariperjantai.IsVisible = false;
+                viikonpäiväteksti.Text = "Torstai";
+            }
         }
     }
 }

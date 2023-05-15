@@ -5,6 +5,7 @@ namespace OpiskeluSovellus.Models
 	{
         public DateTime Alkamisaika { get; set; }
         public DateTime Päättymisaika { get; set; }
+        public string Viikonpäivä { get; set; }
         public int KurssiId { get; set; }
         public string Kurssinimi { get; set; }
         public int Laajuus { get; set; }
