@@ -97,8 +97,58 @@ namespace OpiskeluSovellus.Views
                     lukkaritorstai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Torstai");
                     lukkariperjantai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Perjantai");
 
-                    viikonpäiväteksti.Text = "Maanantai"; //TÄHÄN SE PÄIVÄ MIKÄ NYT ON
-                    vasemmallenappi.BackgroundColor = Color.LightGray;
+                    DateTime pvm = DateTime.Now;
+                    DayOfWeek dayOfWeek = pvm.DayOfWeek;
+                    string dayOfWeekString = dayOfWeek.ToString();
+
+                    if (dayOfWeekString == "Monday")
+                    {
+                        dayOfWeekString = "Maanantai";
+                    }
+
+                    else if (dayOfWeekString == "Tuesday")
+                    {
+                        dayOfWeekString = "Tiistai";
+                    }
+
+                    else if (dayOfWeekString == "Wednesday")
+                    {
+                        dayOfWeekString = "Keskiviikko";
+                    }
+
+                    else if (dayOfWeekString == "Thursday")
+                    {
+                        dayOfWeekString = "Torstai";
+                    }
+
+                    else if (dayOfWeekString == "Friday")
+                    {
+                        dayOfWeekString = "Perjantai";
+                    }
+
+                    else if (dayOfWeekString == "Saturday")
+                    {
+                        dayOfWeekString = "Maanantai";
+                    }
+
+                    else if (dayOfWeekString == "Sunday")
+                    {
+                        dayOfWeekString = "Maanantai";
+                    }
+
+                    viikonpäiväteksti.Text = dayOfWeekString;
+
+                    if (dayOfWeekString == "Maanantai" )
+                    {
+                        vasemmallenappi.BackgroundColor = Color.LightGray;
+                    }
+
+                    if (dayOfWeekString == "Perjantai")
+                    {
+                        oikeallenappi.BackgroundColor = Color.LightGray;
+                    }
+
+
 
 
                 }

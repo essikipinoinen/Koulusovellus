@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 
-    x:Class="OpiskeluSovellus.Views.LukujärjestysSivu">
+    x:Class="OpiskeluSovellus.Views.LukujärjestysSivu"
+                BackgroundColor="#dce1e5">
 
     <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 90" Margin="0, 0, 0, -120" CornerRadius="0" HeightRequest="180">
@@ -17,7 +18,7 @@
 
                     <Label Text="JAKSO 3" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"></Label>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0, 0, 0, 10">
             <Button x:Name="vasemmallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Vasemmalle_Clicked" Text="&lt;"></Button>
             <Label TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="100" x:Name="viikonpäiväteksti"></Label>
             <Button x:Name="oikeallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Oikealle_Clicked" Text=">"></Button>
@@ -30,14 +31,19 @@
                             <Frame CornerRadius="10"
                                    BackgroundColor="White"
                                    HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
+                                   Padding="10, 13, 10, 13"
+                                   Margin="15, 0, 15, 5">
+                                    <Grid HorizontalOptions="CenterAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="180" />
+                                            <ColumnDefinition Width="80" />
                                         </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
                                             <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
                                             <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
@@ -57,14 +63,19 @@
                             <Frame CornerRadius="10"
                                    BackgroundColor="White"
                                    HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
+                                   Padding="10, 13, 10, 13"
+                                   Margin="15, 0, 15, 5">
+                                    <Grid HorizontalOptions="CenterAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="180" />
+                                            <ColumnDefinition Width="80" />
                                         </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
                                             <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
                                             <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
@@ -84,14 +95,19 @@
                             <Frame CornerRadius="10"
                                    BackgroundColor="White"
                                    HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
+                                   Padding="10, 13, 10, 13"
+                                   Margin="15, 0, 15, 5">
+                                    <Grid HorizontalOptions="CenterAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="180" />
+                                            <ColumnDefinition Width="80" />
                                         </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
                                             <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
                                             <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
@@ -111,14 +127,19 @@
                             <Frame CornerRadius="10"
                                    BackgroundColor="White"
                                    HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
+                                   Padding="10, 13, 10, 13"
+                                   Margin="15, 0, 15, 5">
+                                    <Grid HorizontalOptions="CenterAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="180" />
+                                            <ColumnDefinition Width="80" />
                                         </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
                                             <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
                                             <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
@@ -138,14 +159,19 @@
                             <Frame CornerRadius="10"
                                    BackgroundColor="White"
                                    HasShadow="True"
-                                   Padding="10, 20, 20, 20"
-                                   Margin="5, 0, 5, 10">
-                                    <Grid>
+                                   Padding="10, 13, 10, 13"
+                                   Margin="15, 0, 15, 5">
+                                    <Grid HorizontalOptions="CenterAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="180" />
+                                            <ColumnDefinition Width="80" />
                                         </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
                                             <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
                                             <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
