@@ -11,6 +11,8 @@ using Newtonsoft.Json;
 using static Xamarin.Forms.Internals.Profile;
 using System.Collections.ObjectModel;
 using Xamarin.CommunityToolkit.UI.Views;
+using System.Windows.Input;
+using Xamarin.Essentials;
 
 namespace OpiskeluSovellus
 {
@@ -21,14 +23,11 @@ namespace OpiskeluSovellus
         ObservableCollection<Kurssit> dataa = new ObservableCollection<Kurssit>();
         ObservableCollection<Luokka> luokkadataa = new ObservableCollection<Luokka>();
         ObservableCollection<Henkilökunta> henkilökuntadataa = new ObservableCollection<Henkilökunta>();
+        IEnumerable<KurssilistaItem> kurssilistaus;
+
         public KurssitSivu()
         {
-
-
             InitializeComponent();
-
-            //Latausilmoitus
-            kurssi_lataus.Text = "Ladataan kursseja...";
 
             LoadDataFromRestAPI();
 
@@ -72,8 +71,7 @@ namespace OpiskeluSovellus
                     henkilökuntadataa = henkilökuntadataa2;
 
 
-
-                    var kurssilistaus = from kl in dataa
+                    kurssilistaus = from kl in dataa
                                         where kl.Kurssinimi != "Ruoka"
                                         join hk in henkilökuntadataa on kl.HenkilökuntaId equals hk.HenkilökuntaId
                                         join lu in luokkadataa on kl.LuokkaId equals lu.LuokkaId
@@ -88,10 +86,8 @@ namespace OpiskeluSovellus
                                             Luokkatyyppi = lu.Luokkatyyppi
                                         };
 
-                    kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == true).ToList();
-                    kurssilista.ItemsSource = kurssilistaus.Where(x => x.Suoritettu == false).ToList();
-
-                    kurssi_lataus.Text = "";
+                    kurssilista.ItemsSource = kurssilistaus.Where(x => !x.Suoritettu).ToList();
+                    kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu).ToList();
 
                 }
                 catch (Exception e)
@@ -100,11 +96,12 @@ namespace OpiskeluSovellus
                 }
             }
         }
-        private void OnSearchBarButtonPressed(object sender, EventArgs args)
+        private void OnTextChanged(object sender, EventArgs args)
         {
             SearchBar searchBar = (SearchBar)sender;
             string searchText = searchBar.Text;
-            kurssilista.ItemsSource = dataa.Where(x => x.Kurssinimi.ToLower().Contains(searchText.ToLower()));
+            kurssilista.ItemsSource = kurssilistaus.Where(x => !x.Suoritettu && x.Kurssinimi.ToLower().Contains(searchText.ToLower())).ToList();
+            kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu && x.Kurssinimi.ToLower().Contains(searchText.ToLower())).ToList();
         }
 
         async void OnItemSelected(object sender, ItemTappedEventArgs e)
