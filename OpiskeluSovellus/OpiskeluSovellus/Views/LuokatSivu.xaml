@@ -3,11 +3,40 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="OpiskeluSovellus.LuokatSivu">
-    <ContentPage.Content>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -100" CornerRadius="0" HeightRequest="100">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label Padding="0, 20, 0, 0" Text="Luokat" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+            </StackLayout>
+        </Frame>        
         <StackLayout>
-            <Label Text="Luokat" FontSize="Large"></Label>
+            <ListView x:Name="luokkalista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
+                                <StackLayout>
+                                    <Label Text="{Binding Luokkatyyppi}" FontSize="11" TextColor="#2196F3"/>
+                                    <Label Text="{Binding Luokkanimi}" FontAttributes="Bold" FontSize="14"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80" />
+                                            <ColumnDefinition Width="200" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Kapasiteetti"  FontAttributes="Bold" FontSize="12" Grid.Row="0" Grid.Column="0" />
+                                        <Label Text="{Binding Kapasiteetti}" FontSize="12" Grid.Row="0" Grid.Column="1" />
+                                        <Label Text="Varustelu"  FontAttributes="Bold" FontSize="12" Grid.Row="1" Grid.Column="0" />
+                                        <Label Text="{Binding Varustelu}" FontSize="12" Grid.Row="1" Grid.Column="1" />
+                                    </Grid>
 
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
 
