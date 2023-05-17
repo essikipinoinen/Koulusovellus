@@ -10,7 +10,7 @@
                 <StackLayout>
                     <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
                     <Label Padding="0, 20, 0, 0" Text="Lukujärjestys" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
-                    <Label FontSize="12" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele kurssin tietoja valitsemalla haluttu kurssi.</Label>
+                    <Label FontSize="13" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele kurssin tietoja valitsemalla haluttu kurssi.</Label>
             </StackLayout>
             </Frame>        
         <Label x:Name="opiskelija_lataus" />
