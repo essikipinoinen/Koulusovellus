@@ -57,7 +57,7 @@
 
             </ListView>
 
-            <Button Text="Lisää"></Button>
+            <Button x:Name="lisäysnappi" Clicked="Lisää_Clicked" Text="Lisää" IsVisible="false"></Button>
 
         </StackLayout>
 

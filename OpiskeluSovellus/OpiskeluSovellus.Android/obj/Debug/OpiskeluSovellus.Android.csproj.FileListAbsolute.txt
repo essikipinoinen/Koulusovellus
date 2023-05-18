@@ -77,6 +77,7 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/omattiedot.png
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/ruokalista.png
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/nuoli.png
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/sort.png
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/uploadflags.txt
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/resolvedassemblies.hash
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/android/assets/FormsViewGroup.dll
@@ -834,4 +835,3 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/sort.png

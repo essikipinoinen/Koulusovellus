@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="OpiskeluSovellus.Views.LisääArtikkelitSivu">
+<StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -100" CornerRadius="0" HeightRequest="150">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label Padding="0, 20, 0, 0" Text="Ajankohtaista" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+                <Label Padding="0, 20, 0, 0" Text="Lisää uusi uutinen tai muu ajankohtainen asia." HorizontalTextAlignment="Center" TextColor="White" FontSize="13" FontAttributes="Bold"></Label>
+
+            </StackLayout>
+        </Frame>        
+        <StackLayout>
+
+
+                            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
+
+                                <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                   <Grid>
+                                   <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                        <Entry x:Name="otsikkoEntry" Placeholder="Lisää otsikko" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
+                                   </Grid>
+                                    <Entry x:Name="tekstiEntry" Placeholder="Lisää teksti" Grid.Row="1" FontSize="13"/>
+                                        
+                                    </Grid>
+                            </Frame>
+
+
+            <Button x:Name="tallennanappi" Clicked="Tallenna_Clicked" Text="Tallenna"></Button>
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
+

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
 using OpiskeluSovellus.Models;
+using OpiskeluSovellus.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -57,6 +58,18 @@ namespace OpiskeluSovellus
 
                     artikkelilista.ItemsSource = dataa;
 
+                    string kayttajaIdString = Preferences.Get("KayttajaId", null);
+                    int kayttajaId = 0;
+                    if (!string.IsNullOrEmpty(kayttajaIdString))
+                    {
+                        int.TryParse(kayttajaIdString, out kayttajaId);
+                    }
+
+                    if (kayttajaId == 1)
+                    {
+                        lisäysnappi.IsVisible = true;
+                    }
+
 
                 }
                 catch (Exception e)
@@ -80,7 +93,11 @@ namespace OpiskeluSovellus
                 dataa = new ObservableCollection<Artikkelit>(dataa.OrderBy(a => a.Julkaisuaika));
                 artikkelilista.ItemsSource = dataa;
             }
+        }
 
+        void Lisää_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new LisääArtikkelitSivu());
         }
     }
 }
