@@ -56,7 +56,6 @@ namespace OpiskeluSovellus
                     DateTime pvm = DateTime.Now;
                     DayOfWeek dayOfWeek = pvm.DayOfWeek;
                     string dayOfWeekString = dayOfWeek.ToString();
-                    viikonpäivä.Text = dayOfWeekString;
 
                 }
                 catch (Exception e)

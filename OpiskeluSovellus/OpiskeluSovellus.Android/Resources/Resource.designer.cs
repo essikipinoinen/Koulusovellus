@@ -25106,13 +25106,16 @@ namespace OpiskeluSovellus.Droid
 			public const int ruokalista = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int test_custom_background = 2131165374;
+			public const int sort = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int tooltip_frame_dark = 2131165375;
+			public const int test_custom_background = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int tooltip_frame_light = 2131165376;
+			public const int tooltip_frame_dark = 2131165376;
+			
+			// aapt resource value: 0x7F0700C1
+			public const int tooltip_frame_light = 2131165377;
 			
 			static Drawable()
 			{

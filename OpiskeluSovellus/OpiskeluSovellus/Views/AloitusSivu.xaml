@@ -16,15 +16,8 @@
                     <Label FontSize="Body" HorizontalTextAlignment="Center" Padding="10, 0" TextColor="White">tervetuloa käyttämään opiskelusovellusta!</Label>
                 </StackLayout>
             </Frame>
-            <Grid x:Name="LayoutGrid" Padding="35, 0, 35, 0" HorizontalOptions="CenterAndExpand">
+            <Grid HorizontalOptions="CenterAndExpand">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="0"/>
-            </Grid.ColumnDefinitions>
             <Grid ColumnSpacing="20" RowSpacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
                 <Grid.RowDefinitions>
@@ -35,18 +28,15 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <!--Muista lisätä clickedit keskustelut & poistetaan-->
                 <Button ImageSource="lukujarjestys.png"  Style="{StaticResource buttonStyle}" Text="Lukujärjestys" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked_Lukujärjestys"></Button>
                 <Button ImageSource="kurssit.png" Style="{StaticResource buttonStyle}" Text="Kurssit" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked_Kurssit"></Button>
                 <Button ImageSource="ajankohtaista.png" Style="{StaticResource buttonStyle}" Text="Ajankohtaista" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked_Ajankohtaista"></Button>
                 <Button ImageSource="luokat.png" Style="{StaticResource buttonStyle}" Text="Luokat" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked_Luokat"></Button>
                 <Button ImageSource="henkilokunta.png" Style="{StaticResource buttonStyle}" Text="Henkilökunta" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked_Henkilökunta"></Button>
                 <Button ImageSource="ruokalista.png" Style="{StaticResource buttonStyle}" Text="Ruokalista" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked_Ruokalista"></Button>
-                <Button ImageSource="keskustelut.png" Style="{StaticResource buttonStyle}" Text="Keskustelut" Grid.Row="3" Grid.Column="0"></Button>
-                <Button ImageSource="omatTiedot.png" Style="{StaticResource buttonStyle}" Text="Omat tiedot" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked_OmatTiedot"></Button>
-                <Button ImageSource="asetukset.png" Style="{StaticResource buttonStyle}" Text="Asetukset" Grid.Row="4" Grid.Column="1" Clicked="Button_Clicked_Asetukset"></Button>
+                <Button ImageSource="omatTiedot.png" Style="{StaticResource buttonStyle}" Text="Omat tiedot" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked_OmatTiedot"></Button>
+                <Button ImageSource="asetukset.png" Style="{StaticResource buttonStyle}" Text="Asetukset" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked_Asetukset"></Button>
             </Grid>
         </Grid>
         </StackLayout>

@@ -18,15 +18,15 @@
                             <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
                                 <StackLayout>
                                     <Label Text="{Binding Luokkatyyppi}" FontSize="11" TextColor="#2196F3"/>
-                                    <Label Text="{Binding Luokkanimi}" FontAttributes="Bold" FontSize="14"/>
+                                    <Label Text="{Binding Luokkanimi}" FontAttributes="Bold" FontSize="14" />
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="80" />
                                             <ColumnDefinition Width="200" />
                                         </Grid.ColumnDefinitions>
-                                        <Label Text="Kapasiteetti"  FontAttributes="Bold" FontSize="12" Grid.Row="0" Grid.Column="0" />
+                                        <Label Text="Kapasiteetti" FontAttributes="Bold" FontSize="12" Grid.Row="0" Grid.Column="0" />
                                         <Label Text="{Binding Kapasiteetti}" FontSize="12" Grid.Row="0" Grid.Column="1" />
-                                        <Label Text="Varustelu"  FontAttributes="Bold" FontSize="12" Grid.Row="1" Grid.Column="0" />
+                                        <Label Text="Varustelu" FontAttributes="Bold" FontSize="12" Grid.Row="1" Grid.Column="0" />
                                         <Label Text="{Binding Varustelu}" FontSize="12" Grid.Row="1" Grid.Column="1" />
                                     </Grid>
 

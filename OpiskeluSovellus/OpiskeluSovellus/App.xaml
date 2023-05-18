@@ -13,7 +13,7 @@
                 <Setter Property="BackgroundColor" Value="White" />
                 <Setter Property="xct:ShadowEffect.Color" Value="#06253A" />
                 <Setter Property="WidthRequest" Value="150" />
-                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="HeightRequest" Value="70" />
 
                 <Setter Property="xct:ShadowEffect.Radius" Value="3" />
                 <Setter Property="xct:ShadowEffect.Color" Value="#06253A" />

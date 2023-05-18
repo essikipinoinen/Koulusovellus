@@ -3,20 +3,33 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="OpiskeluSovellus.KirjautumisSivu">
-    <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+    x:Class="OpiskeluSovellus.KirjautumisSivu"
+    BackgroundColor="#2196F3">
+    <StackLayout>
 
-           <Label Text="Kirjaudu sisään"></Label>
-            <Entry x:Name="kayttajatunnusEntry" Placeholder="Käyttäjätunnus"></Entry>
-            <Entry x:Name="salasanaEntry" Placeholder="Salasana" IsPassword="True"></Entry>
-            <Button
+                <StackLayout Padding="0, 50, 0, 0">
+                    <Image Source="opiskelusovellus_logo.png" WidthRequest="150"/>
+                    <Label Padding="0, 80, 0, 0" Text="Kirjaudu sisään" HorizontalTextAlignment="Center" TextColor="White" FontSize="23" FontAttributes="Bold"></Label>
+                </StackLayout>
+
+
+        <StackLayout Padding="30" VerticalOptions="Center" Spacing="20">
+            <Frame Padding="17, 7, 17, 2" CornerRadius="30" BackgroundColor="White">
+                <Entry FontSize="16" x:Name="kayttajatunnusEntry" Placeholder="Käyttäjätunnus"></Entry>
+            </Frame>
+            <Frame Padding="17, 7, 17, 2" CornerRadius="30" BackgroundColor="White">
+                <Entry FontSize="16" x:Name="salasanaEntry" Placeholder="Salasana" IsPassword="True"></Entry>
+            </Frame>
+                <Button
                 VerticalOptions="Center"
                 Text="Kirjaudu"
                 BorderWidth="1.5"
-                CornerRadius="50"
-                Clicked="Button_Clicked">
+                CornerRadius="8"
+                Clicked="Button_Clicked"
+                BackgroundColor="#00497A"
+                Margin="80, 10, 80, 10"
+                TextColor="white">
             </Button>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

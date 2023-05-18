@@ -2,9 +2,65 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="OpiskeluSovellus.AjankohtaistaSivu">
-    <ContentPage.Content>
-            <Label Text="Ajankohtaista" FontSize="Large"></Label>
-    </ContentPage.Content>
+<StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -100" CornerRadius="0" HeightRequest="150">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label Padding="0, 20, 0, 0" Text="Ajankohtaista" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+            </StackLayout>
+        </Frame>        
+        <StackLayout>
+
+
+            <ImageButton Source="sort.png"
+                         HorizontalOptions="End"
+                        x:Name="lajittelunappi"
+                        BackgroundColor="White"
+                        Margin="0, 0, 25, 0"
+                        HeightRequest="35"
+                        CornerRadius="50"
+                        Padding="5"
+                        xct:ShadowEffect.Opacity="0.8"
+                        xct:ShadowEffect.Color="#06253A"
+                        xct:ShadowEffect.OffsetY="20"
+                        Clicked="lajittelunappi_Clicked"
+                        />
+
+            <ListView x:Name="artikkelilista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
+
+                                <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                   <Grid>
+                                   <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Julkaisuaika, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="11" TextColor="#2196F3" Grid.Column="0" Grid.Row="0"/>
+                                        <Label Text="{Binding Otsikko}" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
+                                   </Grid>
+                                    <Label Text="{Binding Teksti}" Grid.Row="1" FontSize="13"/>
+                                        
+                                    </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Button Text="Lisää"></Button>
+
+        </StackLayout>
+
+    </StackLayout>
 </ContentPage>
 
