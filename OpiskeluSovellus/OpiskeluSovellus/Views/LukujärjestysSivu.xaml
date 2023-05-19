@@ -44,8 +44,8 @@
                                             <RowDefinition Height="15" />
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:HH\\:mm}'}" Grid.Row="0" Grid.Column="0"/>
+                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:HH\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
                                             <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
                                             <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
                                             <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
