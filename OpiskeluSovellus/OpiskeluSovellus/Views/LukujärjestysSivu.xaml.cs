@@ -169,9 +169,13 @@ namespace OpiskeluSovellus.Views
                 {
                     await Navigation.PushAsync(new RuokaSivu());
                 }
-                else
+                else if (selectedLukkariItem.Kurssinimi != "Ruoka")
                 {
                     await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedLukkariItem.Kurssinimi, selectedLukkariItem.Laajuus.ToString()));
+                }
+                else
+                {
+                    await DisplayAlert("Virhe", "Kurssimateriaalisivulle siirtyminen epäonnistui", "Ok");
                 }
             }
             else
