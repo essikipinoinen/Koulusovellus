@@ -5,31 +5,47 @@
     x:Class="OpiskeluSovellus.RuokaSivu"
             BackgroundColor="#dce1e5">
 <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -100" CornerRadius="0" HeightRequest="150">
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, 20" CornerRadius="0" HeightRequest="60">
             <StackLayout>
                 <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
                 <Label Padding="0, 20, 0, 0" Text="Ruokalista" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
-            <Label FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="20, 40, 20, 0" TextColor="White">VIIKKO 20</Label>
+            <Label FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="20, 40, 20, 0" TextColor="White">VIIKKO 20</Label>
             </StackLayout>
         </Frame>        
         <StackLayout>
+            <Grid HeightRequest="405">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Padding="10, 28, 10, 10" Margin="10, 3, 0, 3">
+                    <StackLayout Spacing="65">
 
-            <ListView x:Name="ruokalista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
-                                <StackLayout>
-                                    <Label Text="Maanantai" FontSize="11" TextColor="#2196F3"/>
-                                    <Label Text="{Binding Ruoka1}" FontAttributes="Bold" FontSize="14"/>
-                                    <Label Text="{Binding Ruokatiedot}" FontSize="12"/>
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+                        <Label Text="Maanantai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="Tiistai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="Keskiviikko" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="Torstai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="Perjantai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
 
-            </ListView>
+                    </StackLayout>
+                </Frame>
+
+                <ListView x:Name="ruokalista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None"  Grid.Column="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame CornerRadius="10" Margin="0, 3, 20, 3" Padding="17" BackgroundColor="white">
+                                    <StackLayout>
+                                        <Label Text="{Binding Ruoka1}" TextColor="#2196F3" FontAttributes="Bold" FontSize="14"/>
+                                        <Label Text="{Binding Ruokatiedot}" FontSize="12"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </Grid>
 
 
 
