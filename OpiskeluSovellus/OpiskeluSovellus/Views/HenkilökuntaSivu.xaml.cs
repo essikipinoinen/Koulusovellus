@@ -5,6 +5,8 @@ using OpiskeluSovellus.Models;
 using System.Collections.ObjectModel;
 using System.Net.Http;
 using Xamarin.Forms;
+using System.Linq;
+
 namespace OpiskeluSovellus
 {
     public partial class HenkilökuntaSivu : ContentPage
@@ -44,7 +46,7 @@ namespace OpiskeluSovellus
 
                     IEnumerable<Henkilökunta> henkilökuntas = JsonConvert.DeserializeObject<Henkilökunta[]>(json);
                     ObservableCollection<Henkilökunta> dataa2 = new ObservableCollection<Henkilökunta>(henkilökuntas);
-                    dataa = dataa2;
+                    dataa = new ObservableCollection<Henkilökunta>(henkilökuntas.OrderBy(h => h.Rooli != "Opettaja").ThenBy(i => i.Rooli));
 
                     henkilökuntalista.ItemsSource = dataa;
 
