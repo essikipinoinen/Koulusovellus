@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using OpiskeluSovellus.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace OpiskeluSovellus
@@ -9,14 +11,9 @@ namespace OpiskeluSovellus
 	{
 
 
-        public AloitusSivu ()
-		{
-			InitializeComponent ();
-        }
-
-        void Button_Clicked_Koti(System.Object sender, System.EventArgs e)
+        public AloitusSivu()
         {
-            Navigation.PushAsync(new OpiskelijaSivu());
+            InitializeComponent();
         }
 
         void Button_Clicked_Kurssit(System.Object sender, System.EventArgs e)
@@ -49,15 +46,16 @@ namespace OpiskeluSovellus
             Navigation.PushAsync(new OpiskelijaSivu());
         }
 
-        void Button_Clicked_Asetukset(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new AsetuksetSivu());
-        }
-
         void Button_Clicked_Lukujärjestys(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new LukujärjestysSivu());
+        }
 
+        void Button_Clicked_KirjauduUlos(System.Object sender, System.EventArgs e)
+        {
+            SecureStorage.Remove("Kayttajatunnus");
+            SecureStorage.Remove("Salasana");
+            Navigation.PushAsync(new KirjautumisSivu());
         }
     }
 }

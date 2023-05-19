@@ -835,3 +835,4 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/Debug/res/drawable/kirjauduulos.png

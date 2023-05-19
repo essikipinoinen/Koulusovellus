@@ -36,7 +36,7 @@
                 <Button ImageSource="henkilokunta.png" Style="{StaticResource buttonStyle}" Text="Henkilökunta" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked_Henkilökunta"></Button>
                 <Button ImageSource="ruokalista.png" Style="{StaticResource buttonStyle}" Text="Ruokalista" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked_Ruokalista"></Button>
                 <Button ImageSource="omatTiedot.png" Style="{StaticResource buttonStyle}" Text="Omat tiedot" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked_OmatTiedot"></Button>
-                <Button ImageSource="asetukset.png" Style="{StaticResource buttonStyle}" Text="Asetukset" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked_Asetukset"></Button>
+                <Button ImageSource="kirjauduUlos.png" Style="{StaticResource buttonStyle}" Text="Kirjaudu ulos" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked_KirjauduUlos"></Button>
             </Grid>
         </Grid>
         </StackLayout>
