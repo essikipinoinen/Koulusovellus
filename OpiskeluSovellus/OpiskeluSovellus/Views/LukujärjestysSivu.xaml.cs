@@ -165,19 +165,19 @@ namespace OpiskeluSovellus.Views
             {
                 LukkariItem selectedLukkariItem = (LukkariItem)e.Item;
                 int id = selectedLukkariItem.KurssiId;
-                await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedLukkariItem.Kurssinimi, selectedLukkariItem.Laajuus.ToString()));
                 if (selectedLukkariItem.Kurssinimi == "Ruoka")
                 {
                     await Navigation.PushAsync(new RuokaSivu());
-
+                }
+                else
+                {
+                    await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedLukkariItem.Kurssinimi, selectedLukkariItem.Laajuus.ToString()));
                 }
             }
             else
             {
                 await Navigation.PushAsync(new AloitusSivu());
             }
-            //    var kurs = e.Item as Kurssit;
-            //    await Navigation.PushAsync(new KurssimateriaaliSivu(kurs.KurssiId, kurs.Kurssinimi, kurs.Laajuus.ToString()));
         }
 
   
