@@ -52,12 +52,15 @@ namespace OpiskeluSovellus
 #else
                     HttpClient client = new HttpClient();
 #endif
-
                     client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+
+                    // Haetaan JSON-tiedot kurssitietojen, luokkien ja henkilökunnan osalta
                     string json = await client.GetStringAsync("api/kurssit");
                     string json2 = await client.GetStringAsync("api/luokat");
                     string json3 = await client.GetStringAsync("api/henkilökunta");
 
+
+                    // Deserialisoi JSON-tiedot vastaaviin luokkiin ja luo ObservableCollections niiden pohjalta
                     IEnumerable<Kurssit> kurssits = JsonConvert.DeserializeObject<Kurssit[]>(json);
                     ObservableCollection<Kurssit> dataa2 = new ObservableCollection<Kurssit>(kurssits);
                     dataa = dataa2;
@@ -70,7 +73,7 @@ namespace OpiskeluSovellus
                     ObservableCollection<Henkilökunta> henkilökuntadataa2 = new ObservableCollection<Henkilökunta>(henkilökuntas);
                     henkilökuntadataa = henkilökuntadataa2;
 
-
+                    // Liitetään kurssitiedot, luokkatiedot ja henkilökuntatiedot yhteen kurssilistausta varten
                     kurssilistaus = from kl in dataa
                                         where kl.Kurssinimi != "Ruoka"
                                         join hk in henkilökuntadataa on kl.HenkilökuntaId equals hk.HenkilökuntaId
@@ -86,6 +89,7 @@ namespace OpiskeluSovellus
                                             Luokkatyyppi = lu.Luokkatyyppi
                                         };
 
+                    // Asetetaan kurssilistatiedot näkymille sen mukaan, onko kurssi suoritettu vai ei
                     kurssilista.ItemsSource = kurssilistaus.Where(x => !x.Suoritettu).ToList();
                     kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu).ToList();
 
@@ -96,6 +100,10 @@ namespace OpiskeluSovellus
                 }
             }
         }
+
+        // Haku, joka reagoi jo tekstin kirjoittamiseen
+        // -> ei tarvitse ns. nollata, jotta saa kaikki kurssit näkyviin,
+        // vaan voi ottaa tekstin pois
         private void OnTextChanged(object sender, EventArgs args)
         {
             SearchBar searchBar = (SearchBar)sender;
@@ -104,14 +112,15 @@ namespace OpiskeluSovellus
             kurssilista2.ItemsSource = kurssilistaus.Where(x => x.Suoritettu && x.Kurssinimi.ToLower().Contains(searchText.ToLower())).ToList();
         }
 
+        // Käsittelijä valittujen kohteiden tapahtumille
         async void OnItemSelected(object sender, ItemTappedEventArgs e)
         {
             KurssilistaItem selectedKurssilistaItem = (KurssilistaItem)e.Item;
             int id = selectedKurssilistaItem.KurssiId;
+
+            // Siirrytään kurssimateriaalisivulle valitun kurssin perusteella
             await Navigation.PushAsync(new KurssimateriaaliSivu(id, selectedKurssilistaItem.Kurssinimi, selectedKurssilistaItem.Laajuus.ToString()));
         }
-
-
     }
 }
 

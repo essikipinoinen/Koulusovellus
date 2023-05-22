@@ -51,6 +51,9 @@ namespace OpiskeluSovellus
             Navigation.PushAsync(new LukujärjestysSivu());
         }
 
+        // Kun "Kirjaudu ulos" -painiketta klikataan,
+        // poistetaan tallennetut käyttäjätunnus ja salasana SecureStoragesta
+        // ja siirrytään "KirjautumisSivu" -sivulle
         void Button_Clicked_KirjauduUlos(System.Object sender, System.EventArgs e)
         {
             SecureStorage.Remove("Kayttajatunnus");

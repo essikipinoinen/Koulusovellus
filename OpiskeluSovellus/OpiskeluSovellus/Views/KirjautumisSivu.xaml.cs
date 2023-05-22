@@ -59,36 +59,37 @@ namespace OpiskeluSovellus
 
         private async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            // Authenticate user's credentials
+            // Tarkistetaan käyttäjän tunnistetiedot
             bool isAuthenticated = AuthenticateUser(kayttajatunnusEntry.Text, salasanaEntry.Text);
 
             if (isAuthenticated)
             {
-                // Store user data
+                // Tallennetaan käyttäjän tiedot SecureStorageen
                 await SecureStorage.SetAsync("Kayttajatunnus", kayttajatunnusEntry.Text);
                 await SecureStorage.SetAsync("Salasana", salasanaEntry.Text);
 
-                // Navigate to main content page
+                // Siirrytään aloitussivulle
                 await Navigation.PushAsync(new AloitusSivu());
             }
             else
             {
-                // Display error message
+                // Näytetään virheilmoitus
                 await DisplayAlert("Virhe", "Väärä käyttäjätunnus tai salasana", "OK");
             }
         }
 
         private bool AuthenticateUser(string kayttajatunnus, string salasana)
         {
-            // Retrieve user data from an API or database
+            // Haetaan käyttäjän tiedot
             var kayttajat = dataa;
 
-            // Check if the provided credentials match a user in the database
+            // Tarkistetaan, vastaavatko annetut tunnistetiedot
+            // tietokannassa olevan käyttäjän (opiskelijan) tunnistetietoja
             var kayttaja = kayttajat.FirstOrDefault(k => k.Käyttäjätunnus == kayttajatunnus && k.Salasana == salasana);
             int kayttajaId = kayttaja?.OpiskelijaId ?? 0;
             Preferences.Set("KayttajaId", kayttajaId.ToString());
 
-            // Return true if authentication is successful, false otherwise
+            // Palautetaan true, jos tunnistautuminen on onnistunut, muuten false
             return kayttaja != null;
         }
     }

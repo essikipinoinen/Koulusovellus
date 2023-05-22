@@ -16,6 +16,7 @@ namespace OpiskeluSovellus
         {
             InitializeComponent();
 
+            // Sovellus aukeaa kirjautumissivulta
             MainPage = new NavigationPage(new KirjautumisSivu());
         }
 

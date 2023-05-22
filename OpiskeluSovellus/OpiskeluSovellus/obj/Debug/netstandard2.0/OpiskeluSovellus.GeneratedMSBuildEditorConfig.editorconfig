@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = OpiskeluSovellus
+build_property.RootNamespace = OpiskeluSovellus
+build_property.DebugDocoptNet = 
 build_property.ProjectDir = /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/

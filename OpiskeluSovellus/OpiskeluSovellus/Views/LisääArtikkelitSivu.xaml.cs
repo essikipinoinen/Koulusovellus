@@ -42,12 +42,12 @@ namespace OpiskeluSovellus.Views
 
                 client.BaseAddress = new Uri("https://10.0.2.2:7160/");
 
-                // Retrieve values from UI entries
+                // Haetaan arvot käyttöliittymän tekstikentistä
                 string otsikko = otsikkoEntry.Text;
                 string teksti = tekstiEntry.Text;
                 DateTime julkaisuaika = DateTime.Now;
 
-                // Create a new instance of Artikkelit with the data entered by the user
+                // Luodaan uusi Artikkelit-instanssi käyttäjän syöttämillä tiedoilla
                 Artikkelit newArtikkelit = new Artikkelit
                 {
                     Otsikko = otsikko,
@@ -55,38 +55,40 @@ namespace OpiskeluSovellus.Views
                     Julkaisuaika = julkaisuaika
                 };
 
-                // Serialize the newArtikkelit object to JSON
+                // Serialisoidaan newArtikkelit-objekti JSON-muotoon
                 string json = JsonConvert.SerializeObject(newArtikkelit);
 
-                // Create the HttpContent with the JSON data
+                // Luodaan HttpContent JSON-datalla
                 HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                // Send the POST request
+                // Lähetetään POST-pyyntö
                 HttpResponseMessage response = await client.PostAsync("api/artikkelit", content);
 
-                // Check the response status
+                
                 if (response.IsSuccessStatusCode)
                 {
-                    // POST request successful
-                    await DisplayAlert("Success", "Article created successfully", "OK");
+                    // onnistunut POST-pyyntö
+                    await DisplayAlert("Valmista!", "Uusi artikkeli luotu onnistuneesti", "OK");
                 }
                 else
                 {
-                    // POST request failed
-                    await DisplayAlert("Error", "Failed to create article", "OK");
+                    // epäonnistunut POST-pyyntö
+                    await DisplayAlert("Virhe", "Artikkelin luominen epäonnistui", "OK");
                 }
 
 
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", ex.Message.ToString(), "OK");
+                await DisplayAlert("Virhe", ex.Message.ToString(), "OK");
             }
         }
 
         async void Tallenna_Clicked(object sender, EventArgs e)
         {
+            // Lähetetään tiedot REST API:lle POST-pyynnön avulla
             await PostDataToRestAPI();
+            // Siirrytään takaisin Ajankohtaista-sivulle
             await Navigation.PushAsync(new AjankohtaistaSivu());
 
         }

@@ -22,9 +22,6 @@ namespace OpiskeluSovellus
         {
             InitializeComponent();
 
-            //Latausilmoitus
-            opiskelija_lataus.Text = "Ladataan tietojasi...";
-
             LoadDataFromRestAPI();
 
 
@@ -57,7 +54,7 @@ namespace OpiskeluSovellus
                     ObservableCollection<Opiskelijat> dataa2 = new ObservableCollection<Opiskelijat>(opiskelijat);
                     dataa = dataa2;
 
-
+                    // Haetaan SecureStoragesta kirjautuneen käyttäjän ID
                     string kayttajaIdString = Preferences.Get("KayttajaId", null);
                     int kayttajaId = 0;
                     if (!string.IsNullOrEmpty(kayttajaIdString))
@@ -65,11 +62,11 @@ namespace OpiskeluSovellus
                         int.TryParse(kayttajaIdString, out kayttajaId);
                     }
 
+                    // Näytetään vain kirjautuneen käyttäjän tiedot
                     var opiskelija = dataa.Where(k => k.OpiskelijaId == kayttajaId);
                     opiskelijatiedot.ItemsSource = opiskelija;
-
-                    opiskelija_lataus.Text = "";
                 }
+
                 catch (Exception e)
                 {
                     await DisplayAlert("Virhe", e.Message.ToString(), "Ok");

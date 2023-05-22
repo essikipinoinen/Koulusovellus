@@ -12,7 +12,6 @@
                     <Label FontSize="Body" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele omia tietojasi tai muokkaa niitä alalaidan painikkeesta.</Label>
                 </StackLayout>
             </Frame>        
-        <Label x:Name="opiskelija_lataus" />
 <StackLayout>
 
 <ListView x:Name="opiskelijatiedot" HasUnevenRows="True" SelectionMode="None">

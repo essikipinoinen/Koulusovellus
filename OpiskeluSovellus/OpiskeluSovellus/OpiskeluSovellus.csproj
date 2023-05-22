@@ -25,6 +25,8 @@
     <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="21.1.41" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Xamarin.UITest" Version="4.1.3" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Modles\" />

@@ -46,6 +46,9 @@ namespace OpiskeluSovellus
 
                     IEnumerable<Henkilökunta> henkilökuntas = JsonConvert.DeserializeObject<Henkilökunta[]>(json);
                     ObservableCollection<Henkilökunta> dataa2 = new ObservableCollection<Henkilökunta>(henkilökuntas);
+
+                    // Asetetaan "dataa" ObservableCollecitoniksi, jossa Henkilökunta-oliot on järjestetty ensin "Opettaja"-roolin mukaan
+                    // ja sen jälkeen muiden roolien mukaan
                     dataa = new ObservableCollection<Henkilökunta>(henkilökuntas.OrderBy(h => h.Rooli != "Opettaja").ThenBy(i => i.Rooli));
 
                     henkilökuntalista.ItemsSource = dataa;

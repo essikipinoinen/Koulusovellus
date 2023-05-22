@@ -12,8 +12,6 @@
             </StackLayout>
         </Frame>        
         <StackLayout>
-
-
             <ImageButton Source="sort.png"
                          HorizontalOptions="End"
                         x:Name="lajittelunappi"

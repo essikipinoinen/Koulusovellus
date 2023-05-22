@@ -15,10 +15,7 @@ namespace OpiskeluSovellus.Views
 	public partial class LukujärjestysSivu : ContentPage
     {
         ObservableCollection<Lukujärjestys> dataa = new ObservableCollection<Lukujärjestys>();
-
-        
         ObservableCollection<Kurssit> kurssidataa = new ObservableCollection<Kurssit>();
-
         ObservableCollection<Luokka> luokkadataa = new ObservableCollection<Luokka>();
 
         public LukujärjestysSivu ()
@@ -91,16 +88,19 @@ namespace OpiskeluSovellus.Views
                                            Luokkatyyppi = lu.Luokkatyyppi
                                        };
 
+                    // Asetetaan lukkaritiedot näytettäviin listview-elementteihin päivien mukaan
                     lukkarimaanantai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Maanantai");
                     lukkaritiistai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Tiistai");
                     lukkarikeskiviikko.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Keskiviikko");
                     lukkaritorstai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Torstai");
                     lukkariperjantai.ItemsSource = lukkarilista.ToList().Where(x => x.Viikonpäivä == "Perjantai");
 
+                    // Haetaan nykyinen viikonpäivä
                     DateTime pvm = DateTime.Now;
                     DayOfWeek dayOfWeek = pvm.DayOfWeek;
                     string dayOfWeekString = dayOfWeek.ToString();
 
+                    // Muutetaan englanninkielinen viikonpäiväteksti suomenkieliseksi
                     if (dayOfWeekString == "Monday")
                     {
                         dayOfWeekString = "Maanantai";
@@ -136,8 +136,11 @@ namespace OpiskeluSovellus.Views
                         dayOfWeekString = "Maanantai";
                     }
 
+                    // Oikea lukkarilista aukeaa sen mukaan mikä vkonpäivä nyt on
                     viikonpäiväteksti.Text = dayOfWeekString;
 
+                    // Asetetaan toiseen nuolipainikkeeseen harmaa taustaväri,
+                    // jos on maanantai tai perjantai (harmaa = painikkeesta ei tapahdu mitään"
                     if (dayOfWeekString == "Maanantai" )
                     {
                         vasemmallenappi.BackgroundColor = Color.LightGray;
@@ -147,10 +150,6 @@ namespace OpiskeluSovellus.Views
                     {
                         oikeallenappi.BackgroundColor = Color.LightGray;
                     }
-
-
-
-
                 }
                 catch (Exception e)
                 {
@@ -165,6 +164,9 @@ namespace OpiskeluSovellus.Views
             {
                 LukkariItem selectedLukkariItem = (LukkariItem)e.Item;
                 int id = selectedLukkariItem.KurssiId;
+
+                // Tarkistetaan valitun lukkarikohteen kurssin nimi ja siirrytään siihen liittyvälle sivulle.
+                // Jos valittu kurssi on "Ruoka" siirrytään RuokaSivulle
                 if (selectedLukkariItem.Kurssinimi == "Ruoka")
                 {
                     await Navigation.PushAsync(new RuokaSivu());
@@ -190,9 +192,12 @@ namespace OpiskeluSovellus.Views
         {
             if (viikonpäiväteksti.Text == "Maanantai")
             {
+                // Piilotetaan maanantain lukkarinäkymä ja näytetään tiistain lukkarinäkymä
                 lukkarimaanantai.IsVisible = false;
                 lukkaritiistai.IsVisible = true;
+                // Asetetaan uusi viikonpäiväteksti
                 viikonpäiväteksti.Text = "Tiistai";
+                // Asetetaan nuolipainikkeiden taustavärit
                 oikeallenappi.BackgroundColor = Color.White;
                 vasemmallenappi.BackgroundColor = Color.White;
             }

@@ -28,6 +28,7 @@
                     <ScrollView>
                       <StackLayout HorizontalOptions="FillAndExpand"
                                 VerticalOptions="EndAndExpand">
+                        <!--Tästä alkaa expander ja expander header-->
                         <xct:Expander>
                             <xct:Expander.Header>
                                 <StackLayout Padding="0, 30, 0, 0">
@@ -38,17 +39,17 @@
                                         </Grid.ColumnDefinitions>
                                         <Label HeightRequest="40" Padding="0, 0, 0, 10" FontSize="16" FontAttributes="Bold" Text="Suorittamattomat" Grid.Column="0"></Label>
                                         <StackLayout Grid.Column="1">
-                                        <Image Source="nuoli.png" HeightRequest="15" WidthRequest="15" Margin="0, 5, 0, 0">
-                                            <Image.Triggers>
-                                                <DataTrigger TargetType="Image"
-                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type xct:Expander}}, Path=IsExpanded}"
-                                                     Value="True">
-                                                    <Setter Property="Rotation"
-                                                    Value="180" />
-                                                </DataTrigger>
-                                            </Image.Triggers>
-                                        </Image>
-
+                                            <!--Kun expander headeria klikkaa, nuoli kääntyy ylösalaisin-->            
+                                            <Image Source="nuoli.png" HeightRequest="15" WidthRequest="15" Margin="0, 5, 0, 0">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                         Binding="{Binding Source={RelativeSource AncestorType={x:Type xct:Expander}}, Path=IsExpanded}"
+                                                         Value="True">
+                                                        <Setter Property="Rotation"
+                                                        Value="180" />
+                                                    </DataTrigger>
+                                                </Image.Triggers>
+                                            </Image>
                                         </StackLayout>
                                     </Grid>
                                     <BoxView BackgroundColor="DarkGray"

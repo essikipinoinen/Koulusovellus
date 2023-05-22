@@ -53,10 +53,6 @@ namespace OpiskeluSovellus
 
                     ruokalista.ItemsSource = dataa;
 
-                    DateTime pvm = DateTime.Now;
-                    DayOfWeek dayOfWeek = pvm.DayOfWeek;
-                    string dayOfWeekString = dayOfWeek.ToString();
-
                 }
                 catch (Exception e)
                 {

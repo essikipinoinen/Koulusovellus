@@ -13,28 +13,23 @@
             </StackLayout>
         </Frame>        
         <StackLayout>
+            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
 
-
-                            <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
-
-                                <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                   <Grid>
-                                   <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="70" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                        <Entry x:Name="otsikkoEntry" Placeholder="Lisää otsikko" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
-                                   </Grid>
-                                    <Entry x:Name="tekstiEntry" Placeholder="Lisää teksti" Grid.Row="1" FontSize="13"/>
-                                        
-                                    </Grid>
-                            </Frame>
-
-
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="otsikkoEntry" Placeholder="Lisää otsikko" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
+                    </Grid>
+                    <Entry x:Name="tekstiEntry" Placeholder="Lisää teksti" Grid.Row="1" FontSize="13"/>
+                </Grid>
+            </Frame>
             <Button x:Name="tallennanappi" Clicked="Tallenna_Clicked" Text="Tallenna"></Button>
 
         </StackLayout>

@@ -13,7 +13,8 @@ using Xamarin.Forms;
 namespace OpiskeluSovellus
 {
     public partial class AjankohtaistaSivu : ContentPage
-	{
+    {
+        // Muuttujan alustaminen
         ObservableCollection<Artikkelit> dataa = new ObservableCollection<Artikkelit>();
 
         public AjankohtaistaSivu()
@@ -21,7 +22,6 @@ namespace OpiskeluSovellus
             InitializeComponent();
 
             LoadDataFromRestAPI();
-
 
             async void LoadDataFromRestAPI()
             {
@@ -52,12 +52,13 @@ namespace OpiskeluSovellus
                     ObservableCollection<Artikkelit> dataa2 = new ObservableCollection<Artikkelit>(artikkelits);
                     dataa = dataa2;
 
-                    // LISTAN JÄRJESTYKSEKSI LAITETAAN UUDEMMASTA VANHEMPAAN
+                    // Asetetaan artikkelit järjestykseen julkaisuajan perusteella uusimmasta vanhimpaan
                     dataa = new ObservableCollection<Artikkelit>(dataa.OrderBy(a => a.Julkaisuaika));
-
 
                     artikkelilista.ItemsSource = dataa;
 
+
+                    // Haetaan kirjautumisessa tallennettu Käyttäjä ID
                     string kayttajaIdString = Preferences.Get("KayttajaId", null);
                     int kayttajaId = 0;
                     if (!string.IsNullOrEmpty(kayttajaIdString))
@@ -65,12 +66,11 @@ namespace OpiskeluSovellus
                         int.TryParse(kayttajaIdString, out kayttajaId);
                     }
 
+                    // Tarkistetaan käyttäjä ID:n perusteella, onko lisäysnappi näkyvissä
                     if (kayttajaId == 1)
                     {
                         lisäysnappi.IsVisible = true;
                     }
-
-
                 }
                 catch (Exception e)
                 {
@@ -79,22 +79,25 @@ namespace OpiskeluSovellus
             }
         }
 
-
-        // JOS LAJITTELUNAPPIA KLIKATAAN, LISTAN JÄRJESTYSTÄ MUUTETAAN 
+        // Jos lajittelunappia klikataan, listan järjestys muuttuu päinvastaiseksi
         void lajittelunappi_Clicked(System.Object sender, System.EventArgs e)
         {
+            // Tarkistetaan, onko listan ensimmäinen artikkeli julkaisuaikajärjestyksessä viimeinen
             if (dataa.First().Julkaisuaika <= dataa.Last().Julkaisuaika)
             {
+                // Asetetaan artikkelit järjestykseen julkaisuajan perusteella uusimmasta vanhimpaan
                 dataa = new ObservableCollection<Artikkelit>(dataa.OrderByDescending(a => a.Julkaisuaika));
                 artikkelilista.ItemsSource = dataa;
             }
             else
             {
+                // Asetetaan artikkelit järjestykseen julkaisuajan perusteella vanhimmasta uusimpaan
                 dataa = new ObservableCollection<Artikkelit>(dataa.OrderBy(a => a.Julkaisuaika));
                 artikkelilista.ItemsSource = dataa;
             }
         }
 
+        // Kun lisäysnappia klikataan, siirrytään LisääArtikkelitSivulle
         void Lisää_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new LisääArtikkelitSivu());
