@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using OpiskeluSovellus.Models;
 using OpiskeluSovellus.Views;
@@ -103,9 +104,62 @@ namespace OpiskeluSovellus
             Navigation.PushAsync(new LisääArtikkelitSivu());
         }
 
-        void Deletebutton_Clicked(System.Object sender, System.EventArgs e)
+        async void Deletebutton_Clicked(System.Object sender, System.EventArgs e)
         {
+            // Haetaan poistettavan artikkelin tiedot
+            var button = sender as ImageButton;
+            var artikkeli = button?.BindingContext as Artikkelit;
+
+            // Varmistetaan poisto
+            var vastaus = await DisplayAlert("Poista artikkeli", "Haluatko varmasti poistaa artikkelin?", "Kyllä", "Peruuta");
+
+            if (vastaus)
+            {
+                try
+                {
+                    // Lähetetään DELETE-pyyntö backendiin
+                    HttpClientHandler GetInsecureHandler()
+                    {
+                        HttpClientHandler handler = new HttpClientHandler();
+                        handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+                        {
+                            if (cert.Issuer.Equals("CN=localhost"))
+                                return true;
+                            return errors == System.Net.Security.SslPolicyErrors.None;
+                        };
+                        return handler;
+                    }
+
+#if DEBUG
+                    HttpClientHandler insecureHandler = GetInsecureHandler();
+                    HttpClient client = new HttpClient(insecureHandler);
+#else
+            HttpClient client = new HttpClient();
+#endif
+
+                    client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                    var response = await client.DeleteAsync($"api/artikkelit/{artikkeli.ArtikkeliId}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Poisto onnistui, poistetaan artikkeli ObservableCollectionista, näytetään vahvistusalertti ja päivitetään näkymä
+                        dataa.Remove(artikkeli);
+                        await DisplayAlert("Valmista!", "Artikkeli poistettu onnistuneesti", "OK");
+
+                    }
+                    else
+                    {
+                        // Poisto epäonnistui, näytetään virheilmoitus
+                        await DisplayAlert("Virhe", "Artikkelin poistaminen epäonnistui.", "OK");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Virhe", ex.Message.ToString(), "OK");
+                }
+            }
         }
+
     }
 }
 

@@ -58,9 +58,10 @@
                                                  Padding="8"
                                                  VerticalOptions="CenterAndExpand"
                                                  xct:ShadowEffect.Opacity="0.6"
-                                                xct:ShadowEffect.Color="#06253A"
-                                                xct:ShadowEffect.OffsetY="5"
-                                                xct:ShadowEffect.Radius="3"
+                                                 xct:ShadowEffect.Color="#06253A"
+                                                 xct:ShadowEffect.OffsetY="5"
+                                                 xct:ShadowEffect.Radius="3"
+                                                 CommandParameter="{Binding}"
                                                  />
 
                                 </Grid>
