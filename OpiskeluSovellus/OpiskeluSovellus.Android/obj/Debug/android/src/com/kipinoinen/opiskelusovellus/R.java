@@ -10015,11 +10015,12 @@ public final class R {
     public static final int opiskelusovellus_logo=0x7f0700bb;
     public static final int preference_list_divider_material=0x7f0700bc;
     public static final int recurrence=0x7f0700bd;
-    public static final int ruokalista=0x7f0700be;
-    public static final int sort=0x7f0700bf;
-    public static final int test_custom_background=0x7f0700c0;
-    public static final int tooltip_frame_dark=0x7f0700c1;
-    public static final int tooltip_frame_light=0x7f0700c2;
+    public static final int roskis=0x7f0700be;
+    public static final int ruokalista=0x7f0700bf;
+    public static final int sort=0x7f0700c0;
+    public static final int test_custom_background=0x7f0700c1;
+    public static final int tooltip_frame_dark=0x7f0700c2;
+    public static final int tooltip_frame_light=0x7f0700c3;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

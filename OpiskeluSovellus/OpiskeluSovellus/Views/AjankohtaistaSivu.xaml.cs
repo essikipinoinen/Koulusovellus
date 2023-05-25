@@ -102,6 +102,10 @@ namespace OpiskeluSovellus
         {
             Navigation.PushAsync(new LisääArtikkelitSivu());
         }
+
+        void Deletebutton_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
 

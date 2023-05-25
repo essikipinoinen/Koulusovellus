@@ -1984,11 +1984,12 @@ int drawable omattiedot 0x7f0700ba
 int drawable opiskelusovellus_logo 0x7f0700bb
 int drawable preference_list_divider_material 0x7f0700bc
 int drawable recurrence 0x7f0700bd
-int drawable ruokalista 0x7f0700be
-int drawable sort 0x7f0700bf
-int drawable test_custom_background 0x7f0700c0
-int drawable tooltip_frame_dark 0x7f0700c1
-int drawable tooltip_frame_light 0x7f0700c2
+int drawable roskis 0x7f0700be
+int drawable ruokalista 0x7f0700bf
+int drawable sort 0x7f0700c0
+int drawable test_custom_background 0x7f0700c1
+int drawable tooltip_frame_dark 0x7f0700c2
+int drawable tooltip_frame_light 0x7f0700c3
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
