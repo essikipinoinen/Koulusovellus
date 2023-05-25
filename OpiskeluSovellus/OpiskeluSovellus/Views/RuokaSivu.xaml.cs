@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -11,7 +12,7 @@ namespace OpiskeluSovellus
 {
     public partial class RuokaSivu : ContentPage
 	{
-
+        //DateTime date;
 
         ObservableCollection<Ruoka> dataa = new ObservableCollection<Ruoka>();
         public RuokaSivu()
@@ -50,6 +51,13 @@ namespace OpiskeluSovellus
                     IEnumerable<Ruoka> ruoat = JsonConvert.DeserializeObject<Ruoka[]>(json);
                     ObservableCollection<Ruoka> dataa2 = new ObservableCollection<Ruoka>(ruoat);
                     dataa = dataa2;
+
+                    // Haetaan tämänhetkinen viikko ja asetetaan Labeliin
+                    DateTime dt = DateTime.Now;
+                    Calendar cal = new CultureInfo("fi-FI").Calendar;
+                    int week = cal.GetWeekOfYear(dt, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+
+                    viikkoteksti.Text = "Viikko " + week;
 
                     ruokalista.ItemsSource = dataa;
 
