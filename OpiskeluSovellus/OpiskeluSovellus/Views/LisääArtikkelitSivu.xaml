@@ -14,23 +14,24 @@
         </Frame>        
         <StackLayout>
             <Frame CornerRadius="10" Margin="20, 3, 20, 3" Padding="17" BackgroundColor="white">
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Entry x:Name="otsikkoEntry" Placeholder="Lisää otsikko" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
-                    </Grid>
-                    <Entry x:Name="tekstiEntry" Placeholder="Lisää teksti" Grid.Row="1" FontSize="13"/>
-                </Grid>
+                <StackLayout>
+                    <Label HorizontalOptions="Center" Text="Uusi uutinen" TextColor="#2196F3" FontSize="18" FontAttributes="Bold" Padding="0, 20, 0, 20"></Label>
+                    <Entry x:Name="otsikkoEntry" Placeholder="Lisää otsikko" FontSize="14" MaxLength="30" FontAttributes="Bold"/>
+                    <Editor x:Name="tekstiEntry" Placeholder="Lisää teksti" FontSize="14" MaxLength="500" Margin="0, 10, 0, 10"/>
+                    <Button
+                    x:Name="tallennanappi"
+                    Clicked="Tallenna_Clicked"
+                    Text="Tallenna"
+                    VerticalOptions="Center"
+                    BorderWidth="1.5"
+                    CornerRadius="8"
+                    BackgroundColor="#2196F3"
+                    Margin="80, 20, 80, 10"
+                    TextColor="white">
+                    </Button>
+                </StackLayout>
             </Frame>
-            <Button x:Name="tallennanappi" Clicked="Tallenna_Clicked" Text="Tallenna"></Button>
+
 
         </StackLayout>
 

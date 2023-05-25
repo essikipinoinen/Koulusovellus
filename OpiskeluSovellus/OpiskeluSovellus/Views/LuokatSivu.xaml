@@ -10,7 +10,7 @@
                 <Label Padding="0, 20, 0, 0" Text="Luokat" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
             </StackLayout>
         </Frame>        
-        <StackLayout>
+        <StackLayout Padding="0, 0, 0, 10">
             <ListView x:Name="luokkalista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>

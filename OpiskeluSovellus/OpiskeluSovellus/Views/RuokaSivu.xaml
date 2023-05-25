@@ -15,17 +15,17 @@
         <StackLayout>
             <Grid HeightRequest="405">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="70" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Frame Grid.Column="0" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Padding="10, 28, 10, 10" Margin="10, 3, 0, 3">
                     <StackLayout Spacing="65">
 
-                        <Label Text="Maanantai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
-                        <Label Text="Tiistai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
-                        <Label Text="Keskiviikko" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
-                        <Label Text="Torstai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
-                        <Label Text="Perjantai" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="MA" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="TI" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="KE" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="TO" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
+                        <Label Text="PE" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
 
                     </StackLayout>
                 </Frame>

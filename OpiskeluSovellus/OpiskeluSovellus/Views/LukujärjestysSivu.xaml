@@ -14,7 +14,7 @@
             </StackLayout>
             </Frame>
 
-         <Label Text="JAKSO 3" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"></Label>
+         <Label Text="JAKSO 3" HorizontalTextAlignment="Center" TextColor="White" FontSize="13" FontAttributes="Bold" Padding="0, 40, 0, 0"></Label>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0, 0, 0, 10">
             <Button x:Name="vasemmallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Vasemmalle_Clicked" Text="&lt;"></Button>
@@ -22,7 +22,7 @@
             <Button x:Name="oikeallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Oikealle_Clicked" Text=">"></Button>
         </StackLayout>
         <!--Omat listviewit jokaiselle arkipäivälle-->
-            <ListView x:Name="lukkarimaanantai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="true">
+            <ListView SeparatorVisibility="None" x:Name="lukkarimaanantai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

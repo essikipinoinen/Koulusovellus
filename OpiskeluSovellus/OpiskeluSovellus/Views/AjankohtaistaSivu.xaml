@@ -52,11 +52,20 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
             </ListView>
-
-            <Button x:Name="lisäysnappi" Clicked="Lisää_Clicked" Text="Lisää" IsVisible="false"></Button>
-
+            <StackLayout>
+            <Button x:Name="lisäysnappi"
+                    Clicked="Lisää_Clicked"
+                    Text="Lisää uusi"
+                    IsVisible="false"
+                    VerticalOptions="Center"
+                    BorderWidth="1.5"
+                    CornerRadius="8"
+                    BackgroundColor="#2196F3"
+                    Margin="110, 10, 110, 10"
+                    TextColor="white"> 
+                    </Button>
+            </StackLayout>
         </StackLayout>
 
     </StackLayout>

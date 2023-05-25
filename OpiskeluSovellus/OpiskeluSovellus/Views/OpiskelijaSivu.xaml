@@ -14,7 +14,7 @@
             </Frame>        
 <StackLayout>
 
-<ListView x:Name="opiskelijatiedot" HasUnevenRows="True" SelectionMode="None">
+<ListView x:Name="opiskelijatiedot" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
     <ListView.ItemTemplate>
         <DataTemplate>
             <ViewCell>

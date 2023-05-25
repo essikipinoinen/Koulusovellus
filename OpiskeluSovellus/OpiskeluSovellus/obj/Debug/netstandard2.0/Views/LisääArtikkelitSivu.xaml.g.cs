@@ -20,7 +20,7 @@ namespace OpiskeluSovellus.Views {
         private global::Xamarin.Forms.Entry otsikkoEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry tekstiEntry;
+        private global::Xamarin.Forms.Editor tekstiEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button tallennanappi;
@@ -29,7 +29,7 @@ namespace OpiskeluSovellus.Views {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LisääArtikkelitSivu));
             otsikkoEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "otsikkoEntry");
-            tekstiEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "tekstiEntry");
+            tekstiEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "tekstiEntry");
             tallennanappi = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "tallennanappi");
         }
     }

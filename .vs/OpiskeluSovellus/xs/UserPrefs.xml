@@ -1,23 +1,11 @@
 ﻿<Properties StartupConfiguration="{121ED95B-2000-40DF-8159-8516E80C1948}|Default">
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
   <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <Debugger.DebugSourceFolders>
-    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
-  </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../../../OpiskeluSovellusRestApi/OpiskeluSovellusRestApi/Controllers/LukujärjestysController.cs" line="25" column="34" endLine="25" endColumn="47" offsetX="-1" offsetY="-1" expression="&quot;Virhe: &quot; + o" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OpiskeluSovellus" expanded="True" selected="True">
+          <Node name="OpiskeluSovellus" expanded="True">
             <Node name="OpiskeluSovellus" expanded="True">
               <Node name="Views" expanded="True">
                 <Node name="RuokaSivu.xaml" expanded="True" />
@@ -32,4 +20,16 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../../OpiskeluSovellusRestApi/OpiskeluSovellusRestApi/Controllers/LukujärjestysController.cs" line="25" column="34" endLine="25" endColumn="47" offsetX="-1" offsetY="-1" expression="&quot;Virhe: &quot; + o" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <Debugger.DebugSourceFolders>
+    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
 </Properties>
