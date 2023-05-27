@@ -72,6 +72,19 @@ namespace OpiskeluSovellus
                     {
                         lisäysnappi.IsVisible = true;
                     }
+
+                    // Etsitään listviewistä poistonapit ja muutetaan se näkyväksi käyttäjä ID:n perusteella
+                    // (koska poistonappi on listviewissä, sitä ei löydä samalla tavalla kuin lisäysnappia)
+                    foreach (var artikkeli in dataa)
+                    {
+                        var listViewItem = artikkelilista.TemplatedItems.First(item => (item.BindingContext as Artikkelit) == artikkeli);
+                        var poistonappi = listViewItem.FindByName<ImageButton>("poistonappi");
+
+                        if (kayttajaId == 1)
+                        {
+                            poistonappi.IsVisible = true;
+                        }
+                    }
                 }
                 catch (Exception e)
                 {
@@ -79,6 +92,8 @@ namespace OpiskeluSovellus
                 }
             }
         }
+
+
 
         // Jos lajittelunappia klikataan, listan järjestys muuttuu päinvastaiseksi
         void lajittelunappi_Clicked(System.Object sender, System.EventArgs e)

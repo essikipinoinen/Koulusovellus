@@ -45,25 +45,26 @@
                                     <Label Text="{Binding Julkaisuaika, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="11" TextColor="#2196F3" Grid.Column="0" Grid.Row="0"/>
                                     <Label Text="{Binding Otsikko}" FontAttributes="Bold" FontSize="14" Grid.Column="1" Grid.Row="0"/>
                                     <Label Text="{Binding Teksti}" Grid.Row="1" Grid.ColumnSpan="2" FontSize="13"/>
-                                    <ImageButton HeightRequest="30"
-                                                 WidthRequest="30"
-                                                 Source="roskis.png"
-                                                 Clicked="Deletebutton_Clicked"
-                                                 Grid.Row="0"
-                                                 Grid.RowSpan="2"
-                                                 Grid.Column="2"
-                                                 BackgroundColor="#FF6961"
-                                                 CornerRadius="50"
-                                                 Margin="10"
-                                                 Padding="8"
-                                                 VerticalOptions="CenterAndExpand"
-                                                 xct:ShadowEffect.Opacity="0.6"
-                                                 xct:ShadowEffect.Color="#06253A"
-                                                 xct:ShadowEffect.OffsetY="5"
-                                                 xct:ShadowEffect.Radius="3"
-                                                 CommandParameter="{Binding}"
-                                                 />
-
+                                    <ImageButton
+                                        IsVisible="false" 
+                                        x:Name="poistonappi"
+                                        HeightRequest="30"
+                                        WidthRequest="30"
+                                        Source="roskis.png"
+                                        Clicked="Deletebutton_Clicked"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="2"
+                                        BackgroundColor="#FF6961"
+                                        CornerRadius="50"
+                                        Margin="10"
+                                        Padding="8"
+                                        VerticalOptions="CenterAndExpand"
+                                        xct:ShadowEffect.Opacity="0.6"
+                                        xct:ShadowEffect.Color="#06253A"
+                                        xct:ShadowEffect.OffsetY="5"
+                                        xct:ShadowEffect.Radius="3"
+                                        />
                                 </Grid>
                             </Frame>
                         </ViewCell>
@@ -79,7 +80,7 @@
                     BorderWidth="1.5"
                     CornerRadius="8"
                     BackgroundColor="#2196F3"
-                    Margin="110, 10, 110, 10"
+                    Margin="110, 10, 110, 50"
                     TextColor="white"> 
                     </Button>
             </StackLayout>
