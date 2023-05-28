@@ -1,32 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OpiskeluSovellus.OpiskelijaSivu">
-
-<StackLayout>
-
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Opiskelijasovellus" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
-        </Frame>
-
-        <Label Text="Omat tiedot"></Label>
-        
-        <Label x:Name="opiskelija_lataus" />
-
-
-        <ListView x:Name="opiskelijalista" SelectionMode="Single" StyleClass="lista">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Sukunimi}" Detail="{Binding Etunimi}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-          </ListView>
-
-
-
-    <Button x:Name="navibutton" Text="Kursseihin" Clicked="navibutton_Clicked"></Button>
-
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="OpiskeluSovellus.OpiskelijaSivu"
+    BackgroundColor="#dce1e5">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -150" CornerRadius="0" HeightRequest="150">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label
+                    Padding="0, 20, 0, 0"
+                    Text="Omat tiedot"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="28"
+                    FontAttributes="Bold"></Label>
+            </StackLayout>
+        </Frame>        
+        <StackLayout>
+            <ListView x:Name="opiskelijatiedot" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10" Margin="20" Padding="30, 30, 30, 30" BackgroundColor="white">
+                                <StackLayout>
+                                    <Label TextColor="#2196F3" Text="Etunimi" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Text="{Binding Etunimi}" Style="{StaticResource opiskelijaTieto}" />
+                                    <Label TextColor="#2196F3" Text="Sukunimi" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Padding="0, 0, 0, 15" Text="{Binding Sukunimi}"  Style="{StaticResource opiskelijaTieto}" />
+                                    <BoxView HeightRequest="0.4" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300" />
+                                    <Label TextColor="#2196F3" Padding="0, 15, 0, 0" Text="Osoite" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Text="{Binding Osoite}" Style="{StaticResource opiskelijaTieto}"  />
+                                    <Label TextColor="#2196F3" Text="Puhelinnumero" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Padding="0, 0, 0, 15"  Text="{Binding Puhelinnumero}" Style="{StaticResource opiskelijaTieto}"  />
+                                    <BoxView HeightRequest="0.4" BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="300"/>
+                                    <Label TextColor="#2196F3" Padding="0, 15, 0, 0" Text="Käyttäjätunnus" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Text="{Binding Käyttäjätunnus}" Style="{StaticResource opiskelijaTieto}" />
+                                    <Label TextColor="#2196F3" Text="Salasana" Style="{StaticResource opiskelijaTietoOtsikko}" />
+                                    <Label Text="{Binding Salasana}" Style="{StaticResource opiskelijaTieto}"  />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>
 

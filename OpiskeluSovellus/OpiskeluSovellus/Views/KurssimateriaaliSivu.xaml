@@ -1,24 +1,89 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="OpiskeluSovellus.KurssimateriaaliSivu">
-    <ContentPage.Content>
-        <StackLayout>
-            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Kurssimateriaali" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
-            </Frame>
-            <Label x:Name="kurssimateriaali_lataus" />
-
-            <Label x:Name="materiaaliotsikko"></Label>
-            <ListView x:Name="kurssimateriaalit" StyleClass="lista">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Otsikko}" Detail="{Binding Ohje}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 100" Margin="0, 0, 0, -80" CornerRadius="0" HeightRequest="150">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label Padding="0, 20, 0, 0" x:Name="materiaaliotsikko" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+                <Label FontSize="Body" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele kurssin materiaalia</Label>
+            </StackLayout>
+        </Frame>
+        <Frame
+            CornerRadius="10"
+            BackgroundColor="White"
+            HasShadow="True"
+            Padding="20, 20, 20, 20"
+            Margin="5, 0, 5, 10">
+            <StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <ListView SeparatorVisibility="None" BackgroundColor="#f4f4f4" HorizontalOptions="FillAndExpand" x:Name="kurssimateriaalit" SelectionMode="None" HasUnevenRows="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame CornerRadius="5"
+                                                BackgroundColor="White"
+                                                HasShadow="True"
+                                                Padding="15"
+                                                Margin="15, 3, 15, 3">
+                                            <!--Tästä alkaa expander ja expander header-->
+                                            <xct:Expander>
+                                                <xct:Expander.Header>
+                                                    <StackLayout>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*" />
+                                                                <ColumnDefinition Width="15" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Label FontSize="14" FontAttributes="Bold" Text="{Binding Otsikko}" Grid.Column="0"></Label>
+                                                            <StackLayout Grid.Column="1">
+                                                                <!--Kun expander headeria klikkaa, nuoli kääntyy ylösalaisin-->            
+                                                                <Image Source="nuoli.png" HeightRequest="15" WidthRequest="15" Margin="0, 2, 0, 0">
+                                                                    <Image.Triggers>
+                                                                        <DataTrigger TargetType="Image"
+                                                                                Binding="{Binding Source={RelativeSource AncestorType={x:Type xct:Expander}}, Path=IsExpanded}"
+                                                                                Value="True">
+                                                                            <Setter Property="Rotation"
+                                                                            Value="180" />
+                                                                        </DataTrigger>
+                                                                    </Image.Triggers>
+                                                                </Image>
+                                                            </StackLayout>
+                                                        </Grid>
+                                                    </StackLayout>
+                                                </xct:Expander.Header>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="300" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                        <Label Padding="0, 5, 0, 0" FontSize="12" FontAttributes="Bold" Text="Ohje:" Grid.Row="1" Grid.Column="0" />
+                                                        <Label Padding="0, -2, 0, 5" FontSize="12" Text="{Binding Ohje}" Grid.Row="2" Grid.Column="0"/>
+                                                        <Label Padding="0, 5, 0, 0"  FontSize="12" FontAttributes="Bold" Text="Materiaalit:" Grid.Row="3"  Grid.Column="0" />
+                                                        <Label Padding="0, -2, 0, 5"  FontSize="12" Text="{Binding Materiaali}" Grid.Row="4" Grid.Column="0"/>
+                                                        <Label Padding="0, 5, 0, 0"  FontSize="12" FontAttributes="Bold" Text="Tehtävät:" Grid.Row="5"  Grid.Column="0" />
+                                                        <Label Padding="0, -2, 0, 5"  FontSize="12" Text="{Binding Tehtävä}" Grid.Row="6" Grid.Column="0"/>
+                                                </Grid>
+                                            </xct:Expander>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+            </ScrollView>
+            </StackLayout>
+    </Frame>
+</StackLayout>      
 </ContentPage>
 

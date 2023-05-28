@@ -21,8 +21,8 @@ namespace OpiskeluSovellus
 		{
             InitializeComponent();
 
+            // Vaihtuva otsikko kurssin mukaan
             materiaaliotsikko.Text = Kurssinimi + ": kurssimateriaalit";
-            kurssimateriaali_lataus.Text = "Ladataan kurssimateriaalia...";
 
             LoadDataFromRestAPI();
 
@@ -54,10 +54,9 @@ namespace OpiskeluSovellus
                     IEnumerable<Kurssimateriaali> kurssimateriaalis = JsonConvert.DeserializeObject<Kurssimateriaali[]>(json);
                     ObservableCollection<Kurssimateriaali> dataa2 = new ObservableCollection<Kurssimateriaali>(kurssimateriaalis);
                     dataa = dataa2;
+
+                    // Näytetään vain valitun kurssin kurssimateraalit
                     kurssimateriaalit.ItemsSource = dataa.Where(x => x.KurssiId == KurssiId);
-
-                    kurssimateriaali_lataus.Text = "";
-
 
                 }
                 catch (Exception e)

@@ -2,9 +2,66 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="OpiskeluSovellus.HenkilökuntaSivu">
-    <ContentPage.Content>
-        <Label Text="Henkilökunta" FontSize="Large"></Label>   
-    </ContentPage.Content>
+    x:Class="OpiskeluSovellus.HenkilökuntaSivu"
+    BackgroundColor="#dce1e5">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, -100" CornerRadius="0" HeightRequest="100">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
+                <Label Padding="0, 20, 0, 0" Text="Henkilökunta" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
+            </StackLayout>
+        </Frame>
+        <ListView x:Name="henkilökuntalista" HasUnevenRows="True" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 15, 10, 15"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="18" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="15" FontAttributes="Bold" Grid.Row="0">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="Etunimi" />
+                                            <Binding Path="Sukunimi" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label TextColor="#2196F3" FontSize="12" Text="{Binding Rooli}" Grid.Row="1" Grid.Column="0"/>
+                                <Grid Grid.Row="2"> 
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="200" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.4" />
+                                        <RowDefinition Height="15" />
+                                        <RowDefinition Height="15" />
+                                        <RowDefinition Height="15" />
+                                    </Grid.RowDefinitions>
+                                    <BoxView BackgroundColor="LightGray" HorizontalOptions="Start" WidthRequest="320" Grid.Row="0"  Grid.ColumnSpan="3" />
+                                    <Label FontSize="12" FontAttributes="Bold" Text="Osoite:" Grid.Row="1" Grid.Column="0"/>
+                                    <Label FontSize="12" Text="{Binding Osoite}" Grid.Row="1" Grid.Column="1"/>
+                                    <Label FontSize="12" FontAttributes="Bold" Text="Numero:" Grid.Row="2" Grid.Column="0"/>
+                                    <Label FontSize="12" Text="{Binding Puhelinnumero}" Grid.Row="2" Grid.Column="1"/>
+                                    <Label FontSize="12" FontAttributes="Bold" Text="Sähköposti:" Grid.Row="3" Grid.Column="0"/>
+                                    <Label FontSize="12" Text="{Binding Sähköposti}" Grid.Row="3" Grid.Column="1"/>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
 

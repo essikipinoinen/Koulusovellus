@@ -1,22 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="OpiskeluSovellus.KirjautumisSivu">
-    <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-
-           <Label Text="Kirjaudu sisään"></Label>
-            <Entry x:Name="moi1" Placeholder="Käyttäjätunnus"></Entry>
-            <Entry x:Name="moi" Placeholder="Salasana" IsPassword="True"></Entry>
-            <Button
+    x:Class="OpiskeluSovellus.KirjautumisSivu"
+    BackgroundColor="white">
+    <StackLayout>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" HasShadow="False" Padding="50">
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="150"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Padding="30, 0, 30, 30" VerticalOptions="Center" Spacing="20">
+            <Label
+                Padding="0, 50, 0, 20"
+                Text="Kirjaudu sisään"
+                HorizontalTextAlignment="Center"
+                FontSize="23"
+                FontAttributes="Bold" />
+            <Frame Padding="17, 7, 17, 2" HasShadow="False">
+                <Entry FontSize="16" x:Name="kayttajatunnusEntry" Placeholder="Käyttäjätunnus" />
+            </Frame>
+            <Frame Padding="17, 0, 17, 2" HasShadow="False">
+                <Entry FontSize="16" x:Name="salasanaEntry" Placeholder="Salasana" IsPassword="True" />
+            </Frame>
+                <Button
                 VerticalOptions="Center"
                 Text="Kirjaudu"
                 BorderWidth="1.5"
-                CornerRadius="50"
-                Clicked="Button_Clicked">
+                CornerRadius="8"
+                Clicked="Button_Clicked"
+                BackgroundColor="#2196F3"
+                Margin="80, 20, 80, 10"
+                TextColor="white">
             </Button>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

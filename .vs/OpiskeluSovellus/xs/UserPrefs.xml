@@ -1,55 +1,35 @@
 ﻿<Properties StartupConfiguration="{121ED95B-2000-40DF-8159-8516E80C1948}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" relfile="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" line="112" column="1" />
-      <Breakpoint file="/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/App.xaml" relfile="OpiskeluSovellus/OpiskeluSovellus/App.xaml" line="6" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
+  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Debugger.DebugSourceFolders>
-    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
-  </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.Workbench ActiveDocument="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs">
-    <Files>
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Kurssimateriaali.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/App.xaml" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/OpiskelijaSivu.xaml.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus.Android/Resources/values/styles.xml" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/AloitusSivu.xaml" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Models/Opiskelija.cs" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml" Line="20" Column="23" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus/Views/KirjautumisSivu.xaml.cs" Line="16" Column="10" />
-      <File FileName="OpiskeluSovellus/OpiskeluSovellus.Android/Properties/AndroidManifest.xml" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OpiskeluSovellus" expanded="True">
             <Node name="OpiskeluSovellus" expanded="True">
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="KirjautumisSivu.xaml" expanded="True">
-                  <Node name="KirjautumisSivu.xaml.cs" selected="True" />
-                </Node>
+                <Node name="RuokaSivu.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
             <Node name="OpiskeluSovellus.Android" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-              </Node>
+              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../../OpiskeluSovellusRestApi/OpiskeluSovellusRestApi/Controllers/LukujärjestysController.cs" line="25" column="34" endLine="25" endColumn="47" offsetX="-1" offsetY="-1" expression="&quot;Virhe: &quot; + o" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <Debugger.DebugSourceFolders>
+    <String>/Users/essikipinoinen/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/6dd9def57ce969ca04a0ecd9ef72c0a8f069112d</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.OpiskeluSovellus.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
 </Properties>
