@@ -1,187 +1,237 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="OpiskeluSovellus.Views.LukujärjestysSivu"
-                BackgroundColor="#dce1e5">
-
+    BackgroundColor="#dce1e5">
     <StackLayout>
-            <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 90" Margin="0, 0, 0, -120" CornerRadius="0" HeightRequest="180">
-                <StackLayout>
-                    <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
-                    <Label Padding="0, 20, 0, 0" Text="Lukujärjestys" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
-                    <Label FontSize="13" HorizontalTextAlignment="Center" Padding="20, 0, 20, 0" TextColor="White">Tarkastele kurssin tietoja valitsemalla haluttu kurssi.</Label>
+        <Frame BackgroundColor="#2196F3" Padding="0, 0, 0, 90" Margin="0, 0, 0, -120" CornerRadius="0" HeightRequest="180">
+            <StackLayout>
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50" />
+                <Label
+                    Padding="0, 20, 0, 0"
+                    Text="Lukujärjestys"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="28"
+                    FontAttributes="Bold" />
+                <Label
+                    Text="Tarkastele kurssin tietoja valitsemalla haluttu kurssi."
+                    FontSize="13"
+                    HorizontalTextAlignment="Center"
+                    Padding="20, 0, 20, 0"
+                    TextColor="White" />
             </StackLayout>
-            </Frame>
-
-         <Label Text="JAKSO 3" HorizontalTextAlignment="Center" TextColor="White" FontSize="13" FontAttributes="Bold" Padding="0, 40, 0, 0"></Label>
-
+        </Frame>
+        <Label
+            Text="JAKSO 3"
+            HorizontalTextAlignment="Center"
+            TextColor="White"
+            FontSize="13"
+            FontAttributes="Bold"
+            Padding="0, 40, 0, 0" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0, 0, 0, 10">
-            <Button x:Name="vasemmallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Vasemmalle_Clicked" Text="&lt;"></Button>
-            <Label TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="100" x:Name="viikonpäiväteksti"></Label>
-            <Button x:Name="oikeallenappi" Padding="0" Margin="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BackgroundColor="white" TextColor="#2196F3" FontAttributes="Bold" FontSize="20" Clicked="Oikealle_Clicked" Text=">"></Button>
+            <Button
+                x:Name="vasemmallenappi"
+                Padding="0"
+                Margin="0"
+                CornerRadius="50"
+                WidthRequest="30"
+                HeightRequest="30"
+                BackgroundColor="white"
+                TextColor="#2196F3"
+                FontAttributes="Bold"
+                FontSize="20"
+                Clicked="Vasemmalle_Clicked"
+                Text="&lt;" />
+            <Label
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                WidthRequest="100"
+                x:Name="viikonpäiväteksti"></Label>
+            <Button
+                x:Name="oikeallenappi"
+                Padding="0"
+                Margin="0"
+                CornerRadius="50"
+                WidthRequest="30"
+                HeightRequest="30"
+                BackgroundColor="white"
+                TextColor="#2196F3"
+                FontAttributes="Bold"
+                FontSize="20"
+                Clicked="Oikealle_Clicked"
+                Text=">" />
         </StackLayout>
         <!--Omat listviewit jokaiselle arkipäivälle-->
-            <ListView SeparatorVisibility="None" x:Name="lukkarimaanantai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="true">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 13, 10, 13"
-                                   Margin="15, 0, 15, 5">
-                                    <Grid HorizontalOptions="CenterAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="180" />
-                                            <ColumnDefinition Width="80" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:HH\\:mm}'}" Grid.Row="0" Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:HH\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
-                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
-
-                                    </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-                    <ListView x:Name="lukkaritiistai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 13, 10, 13"
-                                   Margin="15, 0, 15, 5">
-                                    <Grid HorizontalOptions="CenterAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="180" />
-                                            <ColumnDefinition Width="80" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
-                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
-
-                                    </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <ListView x:Name="lukkarikeskiviikko" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 13, 10, 13"
-                                   Margin="15, 0, 15, 5">
-                                    <Grid HorizontalOptions="CenterAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="180" />
-                                            <ColumnDefinition Width="80" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
-                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
-
-                                    </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <ListView x:Name="lukkaritorstai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 13, 10, 13"
-                                   Margin="15, 0, 15, 5">
-                                    <Grid HorizontalOptions="CenterAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="180" />
-                                            <ColumnDefinition Width="80" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
-                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
-
-                                    </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <ListView x:Name="lukkariperjantai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   BackgroundColor="White"
-                                   HasShadow="True"
-                                   Padding="10, 13, 10, 13"
-                                   Margin="15, 0, 15, 5">
-                                    <Grid HorizontalOptions="CenterAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="180" />
-                                            <ColumnDefinition Width="80" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                            <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
-                                            <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
-                                            <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
-                                            <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
-                                            <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
-
-                                    </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <ListView
+            SeparatorVisibility="None"
+            x:Name="lukkarimaanantai"
+            HasUnevenRows="True"
+            SelectionMode="Single"
+            ItemTapped="OnItemSelected"
+            IsVisible="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 13, 10, 13"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:HH\\:mm}'}" Grid.Row="0" Grid.Column="0"/>
+                                <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:HH\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="lukkaritiistai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 13, 10, 13"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
+                                <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="lukkarikeskiviikko" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 13, 10, 13"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
+                                <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="lukkaritorstai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 13, 10, 13"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
+                                <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="lukkariperjantai" HasUnevenRows="True" SelectionMode="Single" ItemTapped="OnItemSelected" IsVisible="false">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            HasShadow="True"
+                            Padding="10, 13, 10, 13"
+                            Margin="15, 0, 15, 5">
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label FontSize="12" Text="{Binding Alkamisaika, StringFormat='{}{0:hh\\:mm}'}" Grid.Row="0"  Grid.Column="0"/>
+                                <Label FontSize="12"  Text="{Binding Päättymisaika, StringFormat='{}{0:hh\\:mm}'}"  Grid.Row="2"  Grid.Column="0" />
+                                <Label FontAttributes="Bold" Text="{Binding Kurssinimi}" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Luokkanimi}" Grid.Row="0" Grid.Column="2"/>
+                                <Label FontSize="12" Text="{Binding Luokkatyyppi}" Grid.Row="1" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
      </StackLayout>
 </ContentPage>
 

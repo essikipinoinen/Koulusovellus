@@ -3,15 +3,25 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib"
     x:Class="OpiskeluSovellus.RuokaSivu"
-            BackgroundColor="#dce1e5">
-<StackLayout>
+    BackgroundColor="#dce1e5">
+    <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="0, 10, 0, 150" Margin="0, 0, 0, 20" CornerRadius="0" HeightRequest="60">
             <StackLayout>
-                <Image Source="opiskelusovellus_logo.png" WidthRequest="50"/>
-                <Label Padding="0, 20, 0, 0" Text="Ruokalista" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" FontAttributes="Bold"></Label>
-            <Label x:Name="viikkoteksti" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="20, 40, 20, 0" TextColor="White">
-
-
+                <Image Source="opiskelusovellus_logo.png" WidthRequest="50" />
+                <Label
+                    Padding="0, 20, 0, 0"
+                    Text="Ruokalista"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="28"
+                    FontAttributes="Bold"></Label>
+                <Label
+                    x:Name="viikkoteksti"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="20, 40, 20, 0"
+                    TextColor="White">
                 </Label>
             </StackLayout>
         </Frame>        
@@ -23,16 +33,13 @@
                 </Grid.ColumnDefinitions>
                 <Frame Grid.Column="0" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Padding="10, 28, 10, 10" Margin="10, 3, 0, 3">
                     <StackLayout Spacing="65">
-
                         <Label Text="MA" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
                         <Label Text="TI" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
                         <Label Text="KE" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
                         <Label Text="TO" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
                         <Label Text="PE" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Start" />
-
                     </StackLayout>
                 </Frame>
-
                 <ListView x:Name="ruokalista" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None"  Grid.Column="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -46,14 +53,9 @@
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-
                 </ListView>
             </Grid>
-
-
-
         </StackLayout>
-
     </StackLayout>
 </ContentPage>
 

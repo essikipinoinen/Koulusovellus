@@ -29,7 +29,6 @@
                                         <Label Text="Varustelu" FontAttributes="Bold" FontSize="12" Grid.Row="1" Grid.Column="0" />
                                         <Label Text="{Binding Varustelu}" FontSize="12" Grid.Row="1" Grid.Column="1" />
                                     </Grid>
-
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
