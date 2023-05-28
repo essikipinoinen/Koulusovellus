@@ -40,7 +40,7 @@ namespace OpiskeluSovellus
                     HttpClient client = new HttpClient();
 #endif
 
-                    client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                    client.BaseAddress = new Uri("https://opiskelusovellusrestapi.azurewebsites.net/");
                     string json = await client.GetStringAsync("api/luokat");
 
                     IEnumerable<Luokka> luokat = JsonConvert.DeserializeObject<Luokka[]>(json);

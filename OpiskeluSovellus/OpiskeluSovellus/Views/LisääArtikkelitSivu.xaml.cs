@@ -40,7 +40,7 @@ namespace OpiskeluSovellus.Views
                 HttpClient client = new HttpClient();
 #endif
 
-                client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                client.BaseAddress = new Uri("https://opiskelusovellusrestapi.azurewebsites.net/");
 
                 // Haetaan arvot käyttöliittymän tekstikentistä
                 string otsikko = otsikkoEntry.Text;

@@ -46,7 +46,7 @@ namespace OpiskeluSovellus
                     HttpClient client = new HttpClient();
 #endif
 
-                    client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                    client.BaseAddress = new Uri("https://opiskelusovellusrestapi.azurewebsites.net/");
                     string json = await client.GetStringAsync("api/artikkelit");
 
                     IEnumerable<Artikkelit> artikkelits = JsonConvert.DeserializeObject<Artikkelit[]>(json);
@@ -98,18 +98,57 @@ namespace OpiskeluSovellus
         // Jos lajittelunappia klikataan, listan järjestys muuttuu päinvastaiseksi
         void lajittelunappi_Clicked(System.Object sender, System.EventArgs e)
         {
+            string kayttajaIdString = Preferences.Get("KayttajaId", null);
+            int kayttajaId = 0;
+            if (!string.IsNullOrEmpty(kayttajaIdString))
+            {
+                int.TryParse(kayttajaIdString, out kayttajaId);
+            }
+
             // Tarkistetaan, onko listan ensimmäinen artikkeli julkaisuaikajärjestyksessä viimeinen
             if (dataa.First().Julkaisuaika <= dataa.Last().Julkaisuaika)
             {
                 // Asetetaan artikkelit järjestykseen julkaisuajan perusteella uusimmasta vanhimpaan
                 dataa = new ObservableCollection<Artikkelit>(dataa.OrderByDescending(a => a.Julkaisuaika));
                 artikkelilista.ItemsSource = dataa;
+
+                if (kayttajaId == 1)
+                {
+                    lisäysnappi.IsVisible = true;
+                }
+
+                foreach (var artikkeli in dataa)
+                {
+                    var listViewItem = artikkelilista.TemplatedItems.First(item => (item.BindingContext as Artikkelit) == artikkeli);
+                    var poistonappi = listViewItem.FindByName<ImageButton>("poistonappi");
+
+                    if (kayttajaId == 1)
+                    {
+                        poistonappi.IsVisible = true;
+                    }
+                }
             }
             else
             {
                 // Asetetaan artikkelit järjestykseen julkaisuajan perusteella vanhimmasta uusimpaan
                 dataa = new ObservableCollection<Artikkelit>(dataa.OrderBy(a => a.Julkaisuaika));
                 artikkelilista.ItemsSource = dataa;
+
+                if (kayttajaId == 1)
+                {
+                    lisäysnappi.IsVisible = true;
+                }
+
+                foreach (var artikkeli in dataa)
+                {
+                    var listViewItem = artikkelilista.TemplatedItems.First(item => (item.BindingContext as Artikkelit) == artikkeli);
+                    var poistonappi = listViewItem.FindByName<ImageButton>("poistonappi");
+
+                    if (kayttajaId == 1)
+                    {
+                        poistonappi.IsVisible = true;
+                    }
+                }
             }
         }
 
@@ -152,7 +191,7 @@ namespace OpiskeluSovellus
             HttpClient client = new HttpClient();
 #endif
 
-                    client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                    client.BaseAddress = new Uri("https://opiskelusovellusrestapi.azurewebsites.net/");
                     var response = await client.DeleteAsync($"api/artikkelit/{artikkeli.ArtikkeliId}");
 
                     if (response.IsSuccessStatusCode)

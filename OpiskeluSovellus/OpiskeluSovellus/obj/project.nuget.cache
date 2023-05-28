@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TTvI2L4ADQavqlv2n8+rfNlw6YRkXYhn9Jh9NhrVFoFf/BXVShsTkiqLSIRxc6vNE9bLXC1JJO7vauF/2uGTRw==",
+  "dgSpecHash": "TOGkta+AMJNyCeWTpuO/GYb4TyJ7G3EaZy/seDECaW/2qYE10OBMsH9pVajUEqg2ts2QspyHg4TGRdwpe5G7Ng==",
   "success": true,
-  "projectFilePath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj",
+  "projectFilePath": "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj",
   "expectedPackageFiles": [
     "/Users/essikipinoinen/.nuget/packages/identitymodel/6.0.0/identitymodel.6.0.0.nupkg.sha512",
     "/Users/essikipinoinen/.nuget/packages/identitymodel.oidcclient/5.2.1/identitymodel.oidcclient.5.2.1.nupkg.sha512",

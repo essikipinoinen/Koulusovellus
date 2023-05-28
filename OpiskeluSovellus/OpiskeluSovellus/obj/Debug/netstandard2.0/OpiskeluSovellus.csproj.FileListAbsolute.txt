@@ -23,3 +23,28 @@
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
 /Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.deps.json
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.dll
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/ref/OpiskeluSovellus.dll
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/bin/Debug/netstandard2.0/OpiskeluSovellus.pdb
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.csproj.AssemblyReference.cache
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.GeneratedMSBuildEditorConfig.editorconfig
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/AjankohtaistaSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/AloitusSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/HenkilökuntaSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KirjautumisSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssimateriaaliSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/KurssitSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/LisääArtikkelitSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/LukujärjestysSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/LuokatSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/OpiskelijaSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/Views/RuokaSivu.xaml.g.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfoInputs.cache
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.AssemblyInfo.cs
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.csproj.CoreCompileInputs.cache
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.dll
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/refint/OpiskeluSovellus.dll
+/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/obj/Debug/netstandard2.0/OpiskeluSovellus.pdb

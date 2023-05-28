@@ -52,7 +52,7 @@ namespace OpiskeluSovellus
 #else
                     HttpClient client = new HttpClient();
 #endif
-                    client.BaseAddress = new Uri("https://10.0.2.2:7160/");
+                    client.BaseAddress = new Uri("https://opiskelusovellusrestapi.azurewebsites.net/");
 
                     // Haetaan JSON-tiedot kurssitietojen, luokkien ja henkilökunnan osalta
                     string json = await client.GetStringAsync("api/kurssit");

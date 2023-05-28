@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=unix
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638203622455237836
+_nugetassetstimestamp=638208704334304585
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=/users/essikipinoinen/projects/opiskelusovellus/opiskelusovellus/opiskelusovellus.android/opiskelusovellus.android.csproj
+projectfullpath=/users/essikipinoinen/desktop/careeria/oma sovellus/koulusovellus/opiskelusovellus/opiskelusovellus.android/opiskelusovellus.android.csproj

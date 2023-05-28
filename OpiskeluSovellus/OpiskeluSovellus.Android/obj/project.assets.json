@@ -5872,11 +5872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
+      "projectUniqueName": "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
       "projectName": "OpiskeluSovellus.Android",
-      "projectPath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
+      "projectPath": "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus.Android/OpiskeluSovellus.Android.csproj",
       "packagesPath": "/Users/essikipinoinen/.nuget/packages/",
-      "outputPath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/",
+      "outputPath": "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -5891,8 +5891,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj": {
-              "projectPath": "/Users/essikipinoinen/Projects/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj"
+            "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj": {
+              "projectPath": "/Users/essikipinoinen/Desktop/Careeria/Oma sovellus/Koulusovellus/OpiskeluSovellus/OpiskeluSovellus/OpiskeluSovellus.csproj"
             }
           }
         }
